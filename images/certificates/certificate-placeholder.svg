@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 300" role="img" aria-label="Certificate placeholder">
+  <rect width="100%" height="100%" fill="#e8f5ff" rx="10"/>
+  <rect x="20" y="20" width="420" height="80" rx="6" fill="#cfe9ff"/>
+  <text x="30" y="60" font-family="Inter, Arial" font-size="20" fill="#054a91">Certificate Title</text>
+  <text x="30" y="110" font-family="Inter, Arial" font-size="12" fill="#054a91">Issuing Organization • 2024</text>
+</svg>
