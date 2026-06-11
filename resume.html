@@ -3,10 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Resume — Download my latest resume for review." />
+    <meta name="description" content="View and download my current resume." />
     <meta name="theme-color" content="#c62828" />
-    <title>Resume — Blessed Joshua G. Bustamante</title>
-
+    <title>Resume | Blessed Joshua G. Bustamante</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
@@ -15,115 +14,47 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
-
   <body class="page-enter">
     <a class="skip-link" href="#main">Skip to content</a>
-    <div id="loading" role="status" aria-live="polite" aria-label="Loading portfolio">
-      <div class="loader-mark" aria-hidden="true"></div>
-    </div>
+    <div id="loading" role="status" aria-live="polite" aria-label="Loading portfolio"><div class="loader-content"><strong>Loading my resume</strong><span class="loader-line" aria-hidden="true"><i></i></span></div></div>
 
     <nav id="mainNav" class="navbar navbar-expand-lg site-nav" aria-label="Primary navigation">
       <div class="container">
-        <a class="navbar-brand brand-lockup" href="index.html" aria-label="Blessed Joshua home">
-          <span class="brand-mark" aria-hidden="true">
-            <img src="images/profile/Profile.png" alt="Blessed Joshua" class="brand-mark-img" width="44" height="44">
-          </span>
-          <span class="brand-copy">
-            <strong>Blessed Joshua</strong>
-            <span>BSIT Student</span>
-          </span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navMenu">
-          <ul class="navbar-nav ms-auto align-items-lg-center">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
-            <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
-            <li class="nav-item"><a class="nav-link" href="projects.html">Work</a></li>
-            <li class="nav-item"><a class="nav-link" href="credentials.html">Credentials</a></li>
-            <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            <li class="nav-item ms-lg-3">
-              <button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode">
-                <i class="fa-solid fa-moon" aria-hidden="true"></i>
-              </button>
-            </li>
-          </ul>
-        </div>
+        <a class="navbar-brand brand-lockup" href="index.html" aria-label="Blessed Joshua home"><span class="brand-mark" aria-hidden="true"><img src="images/profile/Profile.png" alt="Blessed Joshua" class="brand-mark-img" width="44" height="44"></span><span class="brand-copy"><strong>Blessed Joshua</strong><span>BSIT Student</span></span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navMenu"><ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="about.html">About</a></li><li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li><li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li><li class="nav-item"><a class="nav-link" href="projects.html">Work</a></li><li class="nav-item"><a class="nav-link" href="credentials.html">Credentials</a></li><li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li><li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-3"><button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode"><i class="fa-solid fa-moon" aria-hidden="true"></i></button></li>
+        </ul></div>
       </div>
     </nav>
 
     <main id="main">
-      <section id="resume" class="section section-tint">
+      <section class="section section-tint">
         <div class="container">
-          <div class="section-header" data-aos="fade-up">
-            <p class="eyebrow">My Resume</p>
-            <h2>My resume is available for recruiters, classmates, and collaborators.</h2>
-          </div>
-
-          <div class="resume-grid" data-aos="fade-up" data-aos-delay="80">
-            <div class="resume-preview">
-              <div class="resume-sheet" aria-label="Resume snapshot">
-                <div class="resume-sheet-header">
-                  <span class="brand-mark" aria-hidden="true">BJ</span>
-                  <div>
-                    <h3>Blessed Joshua G. Bustamante</h3>
-                    <p>BSIT Student - still learning Web and Mobile Application Development</p>
-                  </div>
-                </div>
-                <div class="resume-sheet-section">
-                  <span>Education</span>
-                  <p>King's College of the Philippines, expected graduation 2027.</p>
-                </div>
-                <div class="resume-sheet-section">
-                  <span>Core Skills</span>
-                  <p>Slight experience with HTML, CSS, JavaScript, PHP, Laravel, MySQL, Git, basic networking, and IT support.</p>
-                </div>
-                <div class="resume-sheet-section">
-                  <span>Experience</span>
-                  <p>PAGASA student internship, event facilitation, and student representation.</p>
-                </div>
+          <div class="resume-viewer" data-aos="fade-up">
+            <div class="resume-toolbar" aria-label="Resume controls">
+              <div class="resume-primary-actions">
+                <a class="btn btn-primary" href="documents/Bustamante_Final_Resume.png" download="Blessed-Joshua-G-Bustamante-Resume.png"><i class="fa-solid fa-download" aria-hidden="true"></i> Download Resume</a>
+                <a class="btn btn-outline-primary" href="documents/Bustamante_Final_Resume.png" target="_blank" rel="noopener"><i class="fa-solid fa-expand" aria-hidden="true"></i> Expand</a>
+              </div>
+              <div class="resume-zoom-controls" aria-label="Zoom controls">
+                <button id="resumeZoomOut" class="icon-control" type="button" aria-label="Zoom out" title="Zoom out"><i class="fa-solid fa-minus" aria-hidden="true"></i></button>
+                <output id="resumeZoomLevel" for="resumeZoomOut resumeZoomIn">100%</output>
+                <button id="resumeZoomIn" class="icon-control" type="button" aria-label="Zoom in" title="Zoom in"><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+                <button id="resumeZoomReset" class="icon-control" type="button" aria-label="Reset zoom" title="Reset zoom"><i class="fa-solid fa-rotate-left" aria-hidden="true"></i></button>
               </div>
             </div>
-            <div class="resume-panel">
-              <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
-              <h3>Download my latest resume</h3>
-              <p>You can use this file for quick review, internship screening, or LinkedIn profile reference.</p>
-              <a class="btn btn-primary" href="documents/resume.pdf" download>
-                <i class="fa-solid fa-download" aria-hidden="true"></i>
-                Download My Resume
-              </a>
-            </div>
+            <figure class="actual-resume">
+              <img id="resumeImage" src="documents/Bustamante_Final_Resume.png" alt="Resume of Blessed Joshua G. Bustamante" loading="eager">
+            </figure>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="container footer-inner">
-        <div>
-          <strong>Blessed Joshua G. Bustamante</strong>
-          <p>&copy; <span id="year"></span> Blessed Joshua G. Bustamante. All rights reserved.</p>
-        </div>
-        <div class="socials" aria-label="Social links">
-          <a href="https://www.linkedin.com/in/blessedjoshuabustamante" aria-label="LinkedIn profile" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
-          <a href="https://github.com/bustamante-j" aria-label="GitHub profile" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-          <a href="https://www.facebook.com/b.joshuaB/" aria-label="Facebook profile" target="_blank" rel="noopener"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
-        </div>
-      </div>
-    </footer>
-
-    <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">
-      <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
-    </button>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
-    <script src="js/script.js" defer></script>
+    <footer class="footer"><div class="container footer-inner"><div class="socials" aria-label="Social links"><a href="https://www.linkedin.com/in/bjgbustamante" aria-label="LinkedIn profile" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a><a href="https://github.com/bustamante-j" aria-label="GitHub profile" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i></a><a href="https://www.facebook.com/b.joshuaB/" aria-label="Facebook profile" target="_blank" rel="noopener"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a></div></div></footer>
+    <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-chevron-up" aria-hidden="true"></i></button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script><script src="js/script.js" defer></script>
   </body>
 </html>

@@ -5,14 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const backToTop = document.getElementById("backToTop");
   const yearEl = document.getElementById("year");
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const loadingStartedAt = performance.now();
 
   const bodyEl = document.body;
   if (bodyEl && bodyEl.classList.contains("page-enter")) {
-    if (window.gsap && !prefersReducedMotion) {
-      gsap.fromTo(bodyEl, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.6, ease: "power2.out", onComplete: () => bodyEl.classList.remove("page-enter") });
-    } else {
-      bodyEl.classList.remove("page-enter");
-    }
+    bodyEl.classList.remove("page-enter");
   }
 
   if (yearEl) {
@@ -37,8 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const storedTheme = localStorage.getItem("theme");
-  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-  setTheme(storedTheme || systemTheme);
+  setTheme(storedTheme || "light");
 
   themeToggle?.addEventListener("click", () => {
     const nextTheme = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
@@ -47,16 +43,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("load", () => {
     if (!loading) return;
-    loading.style.opacity = "0";
-    loading.style.visibility = "hidden";
-    setTimeout(() => loading.remove(), 360);
+    const elapsed = performance.now() - loadingStartedAt;
+    const delay = Math.max(0, 650 - elapsed);
+
+    setTimeout(() => {
+      loading.style.opacity = "0";
+      loading.style.visibility = "hidden";
+      setTimeout(() => loading.remove(), 360);
+    }, delay);
   });
 
   if (window.AOS) {
     AOS.init({
-      duration: 720,
+      duration: 820,
       once: true,
-      offset: 90,
+      offset: 70,
       easing: "ease-out-cubic"
     });
   }
@@ -71,17 +72,71 @@ document.addEventListener("DOMContentLoaded", () => {
       delay: 0.25,
       ease: "power2.out"
     });
-    gsap.from(".profile-panel", { x: -22, opacity: 0, duration: 0.7, delay: 0.18, ease: "power2.out" });
-    gsap.from(".hero-copy", { x: 22, opacity: 0, duration: 0.7, delay: 0.22, ease: "power2.out" });
+    gsap.from(".social-profile-card", { y: 20, opacity: 0, duration: 0.75, delay: 0.12, ease: "power2.out" });
   }
 
-  // Inline certificate lightbox: open images in-page and provide a Back button
+  const motionItems = Array.from(document.querySelectorAll(
+    ".skill-item, .technology-cloud span, .tool-tile-grid span, .snapshot-list a, .featured-projects a, .profile-detail-list li, .compact-list li, .cert-card"
+  )).filter((item) => !item.hasAttribute("data-aos"));
+
+  motionItems.forEach((item, index) => {
+    item.classList.add("motion-item");
+    item.style.setProperty("--motion-delay", `${(index % 8) * 55}ms`);
+  });
+
+  if (!prefersReducedMotion && "IntersectionObserver" in window) {
+    const motionObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("motion-visible");
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -30px 0px" });
+
+    motionItems.forEach((item) => motionObserver.observe(item));
+  } else {
+    motionItems.forEach((item) => item.classList.add("motion-visible"));
+  }
+
+  const resumeImage = document.getElementById("resumeImage");
+  const resumeZoomIn = document.getElementById("resumeZoomIn");
+  const resumeZoomOut = document.getElementById("resumeZoomOut");
+  const resumeZoomReset = document.getElementById("resumeZoomReset");
+  const resumeZoomLevel = document.getElementById("resumeZoomLevel");
+  let resumeScale = 1;
+
+  const updateResumeZoom = () => {
+    if (!resumeImage) return;
+    resumeImage.style.width = `${resumeScale * 100}%`;
+    if (resumeZoomLevel) resumeZoomLevel.textContent = `${Math.round(resumeScale * 100)}%`;
+    if (resumeZoomOut) resumeZoomOut.disabled = resumeScale <= 0.75;
+    if (resumeZoomIn) resumeZoomIn.disabled = resumeScale >= 2;
+  };
+
+  resumeZoomIn?.addEventListener("click", () => {
+    resumeScale = Math.min(2, resumeScale + 0.25);
+    updateResumeZoom();
+  });
+
+  resumeZoomOut?.addEventListener("click", () => {
+    resumeScale = Math.max(0.75, resumeScale - 0.25);
+    updateResumeZoom();
+  });
+
+  resumeZoomReset?.addEventListener("click", () => {
+    resumeScale = 1;
+    updateResumeZoom();
+  });
+
+  updateResumeZoom();
+
+  // Inline certificate lightbox.
   const certLightbox = document.getElementById('certLightbox');
   const certImg = document.getElementById('certLightboxImg');
   const certClose = certLightbox?.querySelector('.lightbox-close');
   let _lastFocusedCert = null;
 
-  document.querySelectorAll('.cert-gallery a.cert-link').forEach((a) => {
+  document.querySelectorAll('a.cert-link').forEach((a) => {
     a.addEventListener('click', (e) => {
       const href = a.getAttribute('href') || a.querySelector('img')?.src;
       if (!href || !certLightbox) return;
@@ -146,6 +201,29 @@ document.addEventListener("DOMContentLoaded", () => {
       if (navMenu?.classList.contains("show") && window.bootstrap) {
         bootstrap.Collapse.getOrCreateInstance(navMenu).hide();
       }
+    });
+  });
+
+  document.querySelectorAll('a[href$=".html"]').forEach((anchor) => {
+    anchor.addEventListener("click", (event) => {
+      if (
+        event.defaultPrevented ||
+        event.button !== 0 ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey ||
+        anchor.target === "_blank"
+      ) return;
+
+      const destination = new URL(anchor.href, window.location.href);
+      if (destination.href === window.location.href) return;
+
+      event.preventDefault();
+      document.body.classList.add("page-exit");
+      setTimeout(() => {
+        window.location.href = destination.href;
+      }, prefersReducedMotion ? 0 : 170);
     });
   });
 
@@ -241,26 +319,4 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
   });
 
-  const contactForm = document.getElementById("contactForm");
-  const contactStatus = document.getElementById("contactStatus");
-
-  contactForm?.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    if (!contactForm.checkValidity()) {
-      contactStatus.textContent = "Please complete the required fields.";
-      contactForm.reportValidity();
-      return;
-    }
-
-    const formData = new FormData(contactForm);
-    const name = String(formData.get("name") || "").trim();
-    const email = String(formData.get("email") || "").trim();
-    const message = String(formData.get("message") || "").trim();
-    const subject = encodeURIComponent(`Portfolio message from ${name}`);
-    const body = encodeURIComponent(`Hello Blessed Joshua,\n\n${message}\n\nFrom: ${name}\nEmail: ${email}`);
-
-    contactStatus.textContent = "Opening your email app...";
-    window.location.href = `mailto:bjjoshuagarciab@gmail.com?subject=${subject}&body=${body}`;
-  });
 });
