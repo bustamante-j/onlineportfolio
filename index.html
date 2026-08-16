@@ -1,46 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="I'm Blessed Joshua G. Bustamante, a third-year BSIT student building experience in web development, IT support, and emerging technologies." />
-    <meta name="theme-color" content="#c62828" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Blessed Joshua G. Bustamante is a graduating IT student with experience in virtual assistance, real estate support, social media management, and digital operations.">
+    <meta name="theme-color" content="#681827">
     <title>Blessed Joshua G. Bustamante | Portfolio</title>
 
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preload" as="image" href="images/profile/hero-portrait-v2-1200.png" imagesrcset="images/profile/hero-portrait-v2-720.png 720w, images/profile/hero-portrait-v2-1200.png 1200w, images/profile/hero-portrait-v2-2000.png 2000w" imagesizes="(max-width: 767px) calc(100vw - 28px), (max-width: 1199px) 46vw, 590px" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
   </head>
 
-  <body class="page-enter">
+  <body>
     <a class="skip-link" href="#main">Skip to content</a>
-
-    <div id="loading" role="status" aria-live="polite" aria-label="Loading portfolio">
-      <div class="loader-content">
-        <strong>Loading my portfolio</strong>
-        <span class="loader-line" aria-hidden="true"><i></i></span>
-      </div>
-    </div>
 
     <nav id="mainNav" class="navbar navbar-expand-lg site-nav" aria-label="Primary navigation">
       <div class="container">
         <a class="navbar-brand brand-lockup" href="index.html" aria-label="Blessed Joshua home">
-          <span class="brand-mark" aria-hidden="true">
-            <img src="images/profile/Profile.png" alt="Blessed Joshua" class="brand-mark-img" width="44" height="44">
-          </span>
-          <span class="brand-copy">
-            <strong>Blessed Joshua</strong>
-            <span>BSIT Student</span>
-          </span>
+          <span class="brand-copy"><strong>Blessed Joshua</strong><span>Remote Operations &middot; IT</span></span>
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
         <div class="collapse navbar-collapse" id="navMenu">
           <ul class="navbar-nav ms-auto align-items-lg-center">
@@ -52,142 +41,404 @@
             <li class="nav-item"><a class="nav-link" href="credentials.html">Credentials</a></li>
             <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            <li class="nav-item ms-lg-3">
-              <button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode">
-                <i class="fa-solid fa-moon" aria-hidden="true"></i>
-              </button>
-            </li>
           </ul>
+          <div class="nav-utility">
+            <button id="themeToggle" class="theme-toggle nav-theme-control" type="button" aria-pressed="false" aria-label="Toggle dark mode"><i class="fa-solid fa-moon" aria-hidden="true"></i></button>
+          </div>
         </div>
       </div>
     </nav>
 
-    <main id="main" class="profile-page">
+    <main id="main" class="editorial-home">
       <section id="home" class="profile-hero" aria-labelledby="profileName">
         <div class="container">
-          <article class="social-profile-card" data-aos="fade-up">
-            <div class="profile-cover" aria-hidden="true">
-              <div class="cover-copy">
-                <span>My professional portfolio</span>
-                <strong>Learning. Building. Serving.</strong>
+          <article class="social-profile-card">
+            <div class="hero-copy">
+              <p class="hero-kicker">Remote Support <span>&middot;</span> Digital Operations <span>&middot;</span> IT</p>
+              <p class="profile-status"><i class="fa-solid fa-circle" aria-hidden="true"></i> Open to remote opportunities</p>
+              <h1 id="profileName"><span class="hero-name-intro">I am,</span><span class="hero-name-primary">Blessed Joshua</span><span class="hero-name-secondary">G. Bustamante</span></h1>
+              <p class="profile-title">Virtual Assistant &middot; Real Estate Support &middot; Social Media Management &middot; Digital Marketing</p>
+              <p class="profile-summary">I bring order to digital work. From lead support to content and customer communication, I help teams move forward with clarity.</p>
+              <div class="profile-location">
+                <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Crystal Cave, Baguio City</span>
+                <a href="contact.html">Contact information</a>
               </div>
+              <nav class="hero-socials" aria-label="Profile links">
+                <a href="https://www.linkedin.com/in/bjgbustamante" target="_blank" rel="noopener" aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                <a href="https://github.com/bustamante-j" target="_blank" rel="noopener" aria-label="GitHub profile"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/b.joshuaB/" target="_blank" rel="noopener" aria-label="Facebook profile"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="mailto:bjjoshuagarciab@gmail.com" aria-label="Send an email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+              </nav>
             </div>
 
-            <div class="profile-identity">
-              <img src="images/profile/Profile.png" alt="Blessed Joshua G. Bustamante" class="profile-avatar" width="176" height="176">
-              <div class="profile-identity-main">
-                <p class="profile-status"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Open to learning opportunities</p>
-                <h1 id="profileName">Blessed Joshua G. Bustamante</h1>
-                <p class="profile-title">Bachelor of Science in Information Technology Student</p>
-                <p class="profile-bio"><i class="fa-solid fa-quote-left" aria-hidden="true"></i> Memento mori.</p>
-                <p class="profile-summary">I am a third-year student specializing in Web and Mobile Application Development, with growing interests in web development, IT support, emerging technologies, and AI-assisted problem-solving.</p>
-                <div class="profile-location">
-                  <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Pico, La Trinidad, Benguet</span>
-                  <a href="contact.html">Contact information</a>
-                </div>
-              </div>
-            </div>
+            <figure class="hero-portrait">
+              <img src="images/profile/hero-portrait-v2-1200.png" srcset="images/profile/hero-portrait-v2-720.png 720w, images/profile/hero-portrait-v2-1200.png 1200w, images/profile/hero-portrait-v2-2000.png 2000w" sizes="(max-width: 767px) calc(100vw - 28px), (max-width: 1199px) 46vw, 590px" alt="Blessed Joshua G. Bustamante speaking at a campus event" class="profile-avatar" width="2000" height="2000" loading="eager" fetchpriority="high" decoding="async">
+            </figure>
 
-            <div class="profile-cta">
-              <a class="btn btn-primary" href="resume.html"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> View Resume</a>
-              <a class="btn btn-outline-primary" href="projects.html"><i class="fa-solid fa-folder-open" aria-hidden="true"></i> View Projects</a>
-              <a class="btn btn-quiet" href="https://github.com/bustamante-j" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
-            </div>
+            <nav class="profile-cta hero-action-panel" aria-label="Portfolio actions">
+              <a class="hero-action-link" href="projects.html#client-work"><span class="hero-action-icon"><i class="fa-solid fa-folder-open" aria-hidden="true"></i></span><span><small>Projects and client work</small><strong>Explore Work</strong></span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              <a class="hero-action-link" href="resume.html"><span class="hero-action-icon"><i class="fa-solid fa-file-lines" aria-hidden="true"></i></span><span><small>Experience and credentials</small><strong>View Resume</strong></span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              <a class="hero-action-link" href="contact.html"><span class="hero-action-icon"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i></span><span><small>Start a conversation</small><strong>Contact Me</strong></span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </nav>
           </article>
+        </div>
+      </section>
 
-          <div class="profile-layout">
-            <div class="profile-feed">
-              <article class="feed-card learning-statement" data-aos="fade-up">
-                <div class="feed-heading">
-                  <span class="section-icon"><i class="fa-solid fa-seedling" aria-hidden="true"></i></span>
-                  <div>
-                    <p class="eyebrow">Where I am now</p>
-                    <h2>I am still learning, not presenting myself as an IT expert.</h2>
-                  </div>
-                </div>
-                <p>I use coursework, self-directed study, certifications, project work, and AI tools to strengthen my understanding. My portfolio documents progress and real experience without overstating my current level.</p>
-                <div class="learning-tags">
-                  <span>Web development practice</span>
-                  <span>AI-assisted learning</span>
-                  <span>IT support fundamentals</span>
-                  <span>Unity game development study</span>
-                </div>
-              </article>
+      <section id="education" class="editorial-section home-education-section" aria-labelledby="homeEducationTitle" data-section="01">
+        <div class="container">
+          <header class="editorial-section-head" data-aos="fade-up">
+            <span class="editorial-section-number">01 / Education</span>
+            <div><h2 id="homeEducationTitle">Education.</h2></div>
+          </header>
+          <div class="home-education-grid">
+            <article class="home-education-card" data-aos="fade-up">
+              <div class="home-education-logo" aria-hidden="true"><img src="images/education/kings-college-transparent.png" alt="" width="1241" height="1268" loading="lazy" decoding="async"></div>
+              <span class="home-education-date">2022–Present</span>
+              <h3>King's College of the Philippines</h3>
+              <p>BS Information Technology · Web &amp; Mobile App Development</p>
+            </article>
+            <article class="home-education-card" data-aos="fade-up" data-aos-delay="60">
+              <div class="home-education-logo" aria-hidden="true"><img src="images/education/university-of-the-cordilleras-transparent.png" alt="" width="1102" height="1428" loading="lazy" decoding="async"></div>
+              <span class="home-education-date">2021–2022</span>
+              <h3>University of the Cordilleras</h3>
+              <p>Senior High School · ICT–Contact Center Services</p>
+            </article>
+            <article class="home-education-card" data-aos="fade-up" data-aos-delay="120">
+              <div class="home-education-logo" aria-hidden="true"><img src="images/education/quezon-memorial-academy-transparent.png" alt="" width="1254" height="1254" loading="lazy" decoding="async"></div>
+              <span class="home-education-date">2016–2020</span>
+              <h3>Quezon Memorial Academy</h3>
+              <p>Junior High School</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-              <article class="feed-card" data-aos="fade-up">
-                <div class="feed-heading">
-                  <span class="section-icon"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></span>
-                  <div>
-                    <p class="eyebrow">Experience snapshot</p>
-                    <h2>My background combines customer service, administration, and student leadership.</h2>
-                  </div>
-                </div>
-                <div class="snapshot-list">
-                  <a href="experience.html"><strong>Registrar's Office Assistant</strong><span>King's College of the Philippines | 2024</span></a>
-                  <a href="experience.html"><strong>Operations Manager</strong><span>College of Information Technology | 2025-2026</span></a>
-                  <a href="experience.html"><strong>Barista</strong><span>Filtro Cafe and Farron Cafe | 2021</span></a>
-                </div>
-              </article>
+      <section id="experience" class="editorial-section home-card-section" aria-labelledby="experienceTitle" data-section="02">
+        <div class="container">
+          <header class="editorial-section-head" data-aos="fade-up">
+            <span class="editorial-section-number">02 / Experience</span>
+            <div><h2 id="experienceTitle">Selected experience.</h2></div>
+          </header>
 
-              <article class="feed-card" data-aos="fade-up">
-                <div class="feed-heading">
-                  <span class="section-icon"><i class="fa-solid fa-code-branch" aria-hidden="true"></i></span>
-                  <div>
-                    <p class="eyebrow">Featured work</p>
-                    <h2>Projects I have helped build and present.</h2>
-                  </div>
-                </div>
-                <div class="featured-projects">
-                  <a href="projects.html"><strong>ProLance Lite</strong><span>Freelancer management tool</span></a>
-                  <a href="projects.html"><strong>ConvertXPress</strong><span>Unit converter Chrome extension</span></a>
-                  <a href="projects.html"><strong>BrainBolt</strong><span>Web-based critical thinking game</span></a>
-                  <a href="projects.html"><strong>Taskly</strong><span>Student journal, co-developer</span></a>
-                </div>
-              </article>
-            </div>
+          <ol class="editorial-index-list" data-aos="fade-up">
+            <li><a class="editorial-row-link" href="experience.html#experience-real-estate"><span class="editorial-row-marker">Remote</span><span class="editorial-row-icon" aria-hidden="true"><i class="fa-solid fa-house-laptop"></i></span><span class="editorial-row-copy"><small>Real estate operations</small><strong>Real Estate Virtual Assistant</strong><em>Lead, CRM, and research support</em><span>Qualification, follow-up, pipeline organization, auditing, and property research.</span></span><i class="fa-solid fa-arrow-right editorial-row-arrow" aria-hidden="true"></i></a></li>
+            <li><a class="editorial-row-link" href="experience.html#experience-social-media"><span class="editorial-row-marker">3 brands</span><span class="editorial-row-icon" aria-hidden="true"><i class="fa-solid fa-hashtag"></i></span><span class="editorial-row-copy"><small>Content operations</small><strong>Social Media Manager</strong><em>Tiles, home improvement, and printing services</em><span>Strategy, calendars, graphics, short-form content, publishing, and research.</span></span><i class="fa-solid fa-arrow-right editorial-row-arrow" aria-hidden="true"></i></a></li>
+            <li><a class="editorial-row-link" href="experience.html#experience-registrar"><span class="editorial-row-marker">2024</span><span class="editorial-row-icon" aria-hidden="true"><i class="fa-solid fa-folder-open"></i></span><span class="editorial-row-copy"><small>Administration</small><strong>Registrar's Office Assistant</strong><em>King's College of the Philippines</em><span>Front-desk assistance, records, and administrative support.</span></span><i class="fa-solid fa-arrow-right editorial-row-arrow" aria-hidden="true"></i></a></li>
+          </ol>
+          <p class="editorial-section-footer"><a class="editorial-inline-link" href="experience.html">View full experience <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+        </div>
+      </section>
 
-            <aside class="profile-sidebar">
-              <article class="side-card" data-aos="fade-left">
-                <h2>Profile details</h2>
-                <ul class="profile-detail-list">
-                  <li><i class="fa-solid fa-user-graduate" aria-hidden="true"></i><span><strong>Third-year BSIT</strong>Web and Mobile Application Development</span></li>
-                  <li><i class="fa-solid fa-calendar-check" aria-hidden="true"></i><span><strong>Expected graduation</strong>2027</span></li>
-                  <li><i class="fa-solid fa-plane-up" aria-hidden="true"></i><span><strong>Long-term aspiration</strong>Serve in the Philippine Air Force</span></li>
-                </ul>
-              </article>
+      <section id="main-skills" class="editorial-section home-card-section home-skills-section" aria-labelledby="mainSkillsTitle" data-section="03">
+        <div class="container">
+          <header class="editorial-section-head" data-aos="fade-up">
+            <span class="editorial-section-number">03 / Skills</span>
+            <div><h2 id="mainSkillsTitle">Skills I bring.</h2></div>
+          </header>
 
-              <article class="side-card" data-aos="fade-left" data-aos-delay="80">
-                <h2>Recent recognition</h2>
-                <ul class="compact-list">
-                  <li>Best Presentation Award - Project T.I.T.A.N.</li>
-                  <li>Third Place - Smart City Convergence 2025</li>
-                  <li>Working Committee - Founder's Day Celebration</li>
-                </ul>
-                <a class="text-link" href="credentials.html">View all credentials <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-              </article>
-            </aside>
+          <ol class="capability-lanes" data-aos="fade-up">
+            <li class="capability-lane">
+              <span class="capability-lane-number" aria-hidden="true">01</span>
+              <span class="capability-lane-icon" aria-hidden="true"><i class="fa-solid fa-house-laptop"></i></span>
+              <div class="capability-lane-heading"><small>Lead and pipeline support</small><h3>Real Estate Virtual Assistance</h3></div>
+              <ul class="capability-lane-tags" aria-label="Real estate virtual assistance skills">
+                <li>Lead Qualification</li><li>Follow-Up Support</li><li>CRM &amp; Pipeline</li><li>Property Research</li>
+              </ul>
+            </li>
+            <li class="capability-lane">
+              <span class="capability-lane-number" aria-hidden="true">02</span>
+              <span class="capability-lane-icon" aria-hidden="true"><i class="fa-solid fa-bullhorn"></i></span>
+              <div class="capability-lane-heading"><small>Content and brand operations</small><h3>Social Media &amp; Digital Marketing</h3></div>
+              <ul class="capability-lane-tags" aria-label="Social media and digital marketing skills">
+                <li>Content Strategy</li><li>Content Creation</li><li>Short-Form Video</li><li>Market Research</li>
+              </ul>
+            </li>
+            <li class="capability-lane">
+              <span class="capability-lane-number" aria-hidden="true">03</span>
+              <span class="capability-lane-icon" aria-hidden="true"><i class="fa-solid fa-list-check"></i></span>
+              <div class="capability-lane-heading"><small>Reliable day-to-day support</small><h3>Client, Admin &amp; Project Support</h3></div>
+              <ul class="capability-lane-tags" aria-label="Client, administrative, and project support skills">
+                <li>Customer Communication</li><li>Data &amp; Documentation</li><li>Workflow Coordination</li><li>Status Reporting</li>
+              </ul>
+            </li>
+            <li class="capability-lane">
+              <span class="capability-lane-number" aria-hidden="true">04</span>
+              <span class="capability-lane-icon" aria-hidden="true"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+              <div class="capability-lane-heading"><small>Technology-assisted workflow</small><h3>Digital &amp; AI Operations</h3></div>
+              <ul class="capability-lane-tags" aria-label="Digital and AI operations skills">
+                <li>AI-Assisted Research</li><li>Marketing Support</li><li>Cloud Collaboration</li><li>IT Foundation</li>
+              </ul>
+            </li>
+          </ol>
+
+          <p class="editorial-section-footer"><a class="editorial-inline-link" href="skills.html">Explore the full skills page <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+        </div>
+      </section>
+
+      <section id="tools" class="editorial-section home-card-section home-tools-section" aria-labelledby="homeToolsTitle" data-section="04">
+        <div class="container">
+          <header class="editorial-section-head" data-aos="fade-up">
+            <span class="editorial-section-number">04 / Tools</span>
+            <div><h2 id="homeToolsTitle">Tools I work with.</h2></div>
+          </header>
+
+          <div class="home-tool-groups" data-aos="fade-up">
+            <article class="home-tool-group">
+              <header><small>Lead &amp; property work</small><h3>Real Estate</h3></header>
+              <ul class="home-tool-list">
+                <li><span class="home-tool-mark home-tool-mark-image"><img src="images/tools/sierra-interactive.png" alt="" width="180" height="180" loading="lazy" decoding="async"></span><strong>Sierra Interactive</strong></li>
+                <li><span class="home-tool-mark home-tool-mark-zillow"><iconify-icon icon="simple-icons:zillow" aria-hidden="true"></iconify-icon></span><strong>Zillow</strong></li>
+                <li><span class="home-tool-mark home-tool-mark-image home-tool-mark-upload"><img src="images/tools/replacement-logos/skipify.png" alt="" width="764" height="781" loading="lazy" decoding="async"></span><strong>Skipify</strong></li>
+                <li><span class="home-tool-mark home-tool-mark-image"><img src="images/tools/smarter-contact.png" alt="" width="128" height="128" loading="lazy" decoding="async"></span><strong>Smarter Contact</strong></li>
+              </ul>
+            </article>
+
+            <article class="home-tool-group">
+              <header><small>Publishing &amp; creative production</small><h3>Content &amp; Design</h3></header>
+              <ul class="home-tool-list">
+                <li><span class="home-tool-mark home-tool-mark-image home-tool-mark-upload home-tool-mark-wide"><img src="images/tools/replacement-logos/meta-business-suite.png" alt="" width="1567" height="1041" loading="lazy" decoding="async"></span><strong>Meta Business Suite</strong></li>
+                <li><span class="home-tool-mark"><iconify-icon icon="thesvg-color:canva" aria-hidden="true"></iconify-icon></span><strong>Canva</strong></li>
+                <li><span class="home-tool-mark"><iconify-icon icon="logos:adobe-photoshop" aria-hidden="true"></iconify-icon></span><strong>Photoshop</strong></li>
+                <li><span class="home-tool-mark home-tool-mark-image home-tool-mark-upload"><img src="images/tools/replacement-logos/capcut.png" alt="" width="350" height="350" loading="lazy" decoding="async"></span><strong>CapCut</strong></li>
+              </ul>
+            </article>
+
+            <article class="home-tool-group">
+              <header><small>Research &amp; assisted workflow</small><h3>AI Tools</h3></header>
+              <ul class="home-tool-list">
+                <li><span class="home-tool-mark"><iconify-icon icon="logos:openai-icon" aria-hidden="true"></iconify-icon></span><strong>ChatGPT</strong></li>
+                <li><span class="home-tool-mark home-tool-mark-image home-tool-mark-upload"><img src="images/tools/replacement-logos/claude.png" alt="" width="1000" height="1000" loading="lazy" decoding="async"></span><strong>Claude</strong></li>
+                <li><span class="home-tool-mark"><iconify-icon icon="thesvg-color:gemini" aria-hidden="true"></iconify-icon></span><strong>Gemini</strong></li>
+                <li><span class="home-tool-mark"><iconify-icon icon="logos:midjourney" aria-hidden="true"></iconify-icon></span><strong>Midjourney</strong></li>
+              </ul>
+            </article>
+
+            <article class="home-tool-group">
+              <header><small>Organization &amp; communication</small><h3>Remote Operations</h3></header>
+              <ul class="home-tool-list">
+                <li><span class="home-tool-mark home-tool-mark-image home-tool-mark-upload home-tool-mark-google"><img src="images/tools/replacement-logos/google-workspace.png" alt="" width="797" height="802" loading="lazy" decoding="async"></span><strong>Google Workspace</strong></li>
+                <li><span class="home-tool-mark home-tool-mark-wide"><iconify-icon icon="thesvg-color:microsoft-office" aria-hidden="true"></iconify-icon></span><strong>Microsoft Office</strong></li>
+                <li><span class="home-tool-mark"><iconify-icon icon="logos:asana-icon" aria-hidden="true"></iconify-icon></span><strong>Asana</strong></li>
+                <li><span class="home-tool-mark home-tool-mark-image home-tool-mark-upload"><img src="images/tools/replacement-logos/zoom.png" alt="" width="980" height="980" loading="lazy" decoding="async"></span><strong>Zoom</strong></li>
+                <li><span class="home-tool-mark"><iconify-icon icon="logos:slack-icon" aria-hidden="true"></iconify-icon></span><strong>Slack</strong></li>
+                <li><span class="home-tool-mark"><iconify-icon icon="logos:discord-icon" aria-hidden="true"></iconify-icon></span><strong>Discord</strong></li>
+                <li><span class="home-tool-mark home-tool-mark-anydesk"><iconify-icon icon="simple-icons:anydesk" aria-hidden="true"></iconify-icon></span><strong>AnyDesk</strong></li>
+              </ul>
+            </article>
+
+            <article class="home-tool-group home-tool-group-wide">
+              <header><small>Web &amp; data workflow</small><h3>Technical Tools</h3></header>
+              <ul class="home-tool-list home-tool-list-technical">
+                <li><span class="home-tool-mark"><i class="devicon-vscode-plain colored" aria-hidden="true"></i></span><strong>VS Code</strong></li>
+                <li><span class="home-tool-mark"><i class="devicon-github-original" aria-hidden="true"></i></span><strong>GitHub</strong></li>
+                <li><span class="home-tool-mark"><i class="devicon-mysql-original colored" aria-hidden="true"></i></span><strong>MySQL</strong></li>
+                <li><span class="home-tool-mark"><i class="devicon-html5-plain colored" aria-hidden="true"></i></span><strong>HTML</strong></li>
+                <li><span class="home-tool-mark"><i class="devicon-css3-plain colored" aria-hidden="true"></i></span><strong>CSS</strong></li>
+                <li><span class="home-tool-mark"><i class="devicon-javascript-plain colored" aria-hidden="true"></i></span><strong>JavaScript</strong></li>
+              </ul>
+            </article>
+          </div>
+
+          <p class="editorial-section-footer"><a class="editorial-inline-link" href="skills.html#tools">View the complete tool list <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+        </div>
+      </section>
+
+      <section id="social-media" class="editorial-section home-card-section social-media-section" aria-labelledby="socialMediaTitle" data-section="05">
+        <div class="container">
+          <header class="editorial-section-head" data-aos="fade-up">
+            <span class="editorial-section-number">05 / Social</span>
+            <div><h2 id="socialMediaTitle">Social media management.</h2></div>
+          </header>
+
+          <div class="social-brand-list">
+            <article class="social-brand-row social-brand-rm" data-aos="fade-up">
+              <header class="social-brand-head">
+                <span class="social-brand-logo"><img src="images/home/social-rm-tiles-center.webp" alt="R and M Tiles Center logo" width="640" height="640" loading="lazy" decoding="async"></span>
+                <div><small>Facebook page managed</small><h3>R &amp; M Tiles Center</h3></div><span class="social-brand-number" aria-hidden="true">01</span>
+              </header>
+              <div class="social-gallery-toolbar">
+                <p><strong>5 selected posts</strong><span>Scroll sideways to explore</span></p>
+                <div class="social-gallery-controls" role="group" aria-label="R and M Tiles Center gallery controls">
+                  <button type="button" data-social-scroll="previous" aria-controls="rmTilesGallery" aria-label="View previous R and M post"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
+                  <button type="button" data-social-scroll="next" aria-controls="rmTilesGallery" aria-label="View next R and M post"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
+              </div>
+              <div id="rmTilesGallery" class="social-brand-previews social-brand-previews-scroll" role="group" aria-label="R and M Tiles Center selected Facebook posts">
+                <button class="social-gallery-trigger social-gallery-trigger-image" type="button" data-bs-toggle="modal" data-bs-target="#socialWorkModal" data-page-title="R &amp; M Tiles Center" data-page-logo="images/home/social-rm-tiles-center.webp" data-page-accent="#08767d" data-preview-image="images/social-media/rm-tiles-center/image1.png" data-preview-alt="R and M Tiles Center Facebook graphic, post 1" aria-haspopup="dialog" aria-label="Open R and M Tiles Center post 1"><span class="social-preview-media social-preview-media-image"><img src="images/social-media/rm-tiles-center/image1.png" alt="" width="1080" height="1080" loading="lazy" decoding="async"><span>Post 01</span></span><span class="social-preview-copy"><strong>Post 01</strong><small>Facebook graphic</small></span></button>
+                <button class="social-gallery-trigger social-gallery-trigger-image" type="button" data-bs-toggle="modal" data-bs-target="#socialWorkModal" data-page-title="R &amp; M Tiles Center" data-page-logo="images/home/social-rm-tiles-center.webp" data-page-accent="#08767d" data-preview-image="images/social-media/rm-tiles-center/image2.png" data-preview-alt="R and M Tiles Center Facebook graphic, post 2" aria-haspopup="dialog" aria-label="Open R and M Tiles Center post 2"><span class="social-preview-media social-preview-media-image"><img src="images/social-media/rm-tiles-center/image2.png" alt="" width="1080" height="1080" loading="lazy" decoding="async"><span>Post 02</span></span><span class="social-preview-copy"><strong>Post 02</strong><small>Facebook graphic</small></span></button>
+                <button class="social-gallery-trigger social-gallery-trigger-image" type="button" data-bs-toggle="modal" data-bs-target="#socialWorkModal" data-page-title="R &amp; M Tiles Center" data-page-logo="images/home/social-rm-tiles-center.webp" data-page-accent="#08767d" data-preview-image="images/social-media/rm-tiles-center/image3.png" data-preview-alt="R and M Tiles Center Facebook graphic, post 3" aria-haspopup="dialog" aria-label="Open R and M Tiles Center post 3"><span class="social-preview-media social-preview-media-image"><img src="images/social-media/rm-tiles-center/image3.png" alt="" width="1080" height="1080" loading="lazy" decoding="async"><span>Post 03</span></span><span class="social-preview-copy"><strong>Post 03</strong><small>Facebook graphic</small></span></button>
+                <button class="social-gallery-trigger social-gallery-trigger-image" type="button" data-bs-toggle="modal" data-bs-target="#socialWorkModal" data-page-title="R &amp; M Tiles Center" data-page-logo="images/home/social-rm-tiles-center.webp" data-page-accent="#08767d" data-preview-image="images/social-media/rm-tiles-center/image4.png" data-preview-alt="R and M Tiles Center Facebook graphic, post 4" aria-haspopup="dialog" aria-label="Open R and M Tiles Center post 4"><span class="social-preview-media social-preview-media-image"><img src="images/social-media/rm-tiles-center/image4.png" alt="" width="1080" height="1080" loading="lazy" decoding="async"><span>Post 04</span></span><span class="social-preview-copy"><strong>Post 04</strong><small>Facebook graphic</small></span></button>
+                <button class="social-gallery-trigger social-gallery-trigger-image" type="button" data-bs-toggle="modal" data-bs-target="#socialWorkModal" data-page-title="R &amp; M Tiles Center" data-page-logo="images/home/social-rm-tiles-center.webp" data-page-accent="#08767d" data-preview-image="images/social-media/rm-tiles-center/image5.png" data-preview-alt="R and M Tiles Center Facebook graphic, post 5" aria-haspopup="dialog" aria-label="Open R and M Tiles Center post 5"><span class="social-preview-media social-preview-media-image"><img src="images/social-media/rm-tiles-center/image5.png" alt="" width="1080" height="1080" loading="lazy" decoding="async"><span>Post 05</span></span><span class="social-preview-copy"><strong>Post 05</strong><small>Facebook graphic</small></span></button>
+              </div>
+            </article>
+
+            <article class="social-brand-row social-brand-ja" data-aos="fade-up">
+              <header class="social-brand-head">
+                <span class="social-brand-logo"><img src="images/home/social-ja-tiles-trading.webp" alt="J and A Tiles Trading logo" width="640" height="640" loading="lazy" decoding="async"></span>
+                <div><small>Facebook page managed</small><h3>J &amp; A Tiles Trading</h3></div><span class="social-brand-number" aria-hidden="true">02</span>
+              </header>
+              <div class="social-gallery-toolbar">
+                <p><strong>5 selected posts</strong><span>Scroll sideways to explore</span></p>
+                <div class="social-gallery-controls" role="group" aria-label="J and A Tiles Trading gallery controls">
+                  <button type="button" data-social-scroll="previous" aria-controls="jaTilesGallery" aria-label="View previous J and A post"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
+                  <button type="button" data-social-scroll="next" aria-controls="jaTilesGallery" aria-label="View next J and A post"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
+              </div>
+              <div id="jaTilesGallery" class="social-brand-previews social-brand-previews-scroll" role="group" aria-label="J and A Tiles Trading selected Facebook posts">
+                <button class="social-gallery-trigger social-gallery-trigger-image" type="button" data-bs-toggle="modal" data-bs-target="#socialWorkModal" data-page-title="J &amp; A Tiles Trading" data-page-logo="images/home/social-ja-tiles-trading.webp" data-page-accent="#d82114" data-preview-image="images/social-media/ja-tiles-trading/image1ja.png" data-preview-alt="J and A Tiles Trading Facebook graphic, post 1" aria-haspopup="dialog" aria-label="Open J and A Tiles Trading post 1"><span class="social-preview-media social-preview-media-image"><img src="images/social-media/ja-tiles-trading/image1ja.png" alt="" width="526" height="526" loading="lazy" decoding="async"><span>Post 01</span></span><span class="social-preview-copy"><strong>Post 01</strong><small>Facebook graphic</small></span></button>
+                <button class="social-gallery-trigger social-gallery-trigger-image" type="button" data-bs-toggle="modal" data-bs-target="#socialWorkModal" data-page-title="J &amp; A Tiles Trading" data-page-logo="images/home/social-ja-tiles-trading.webp" data-page-accent="#d82114" data-preview-image="images/social-media/ja-tiles-trading/image2ja.png" data-preview-alt="J and A Tiles Trading Facebook graphic, post 2" aria-haspopup="dialog" aria-label="Open J and A Tiles Trading post 2"><span class="social-preview-media social-preview-media-image"><img src="images/social-media/ja-tiles-trading/image2ja.png" alt="" width="1080" height="1080" loading="lazy" decoding="async"><span>Post 02</span></span><span class="social-preview-copy"><strong>Post 02</strong><small>Facebook graphic</small></span></button>
+                <button class="social-gallery-trigger social-gallery-trigger-image" type="button" data-bs-toggle="modal" data-bs-target="#socialWorkModal" data-page-title="J &amp; A Tiles Trading" data-page-logo="images/home/social-ja-tiles-trading.webp" data-page-accent="#d82114" data-preview-image="images/social-media/ja-tiles-trading/image3ja.png" data-preview-alt="J and A Tiles Trading Facebook graphic, post 3" aria-haspopup="dialog" aria-label="Open J and A Tiles Trading post 3"><span class="social-preview-media social-preview-media-image"><img src="images/social-media/ja-tiles-trading/image3ja.png" alt="" width="1080" height="1080" loading="lazy" decoding="async"><span>Post 03</span></span><span class="social-preview-copy"><strong>Post 03</strong><small>Facebook graphic</small></span></button>
+                <button class="social-gallery-trigger social-gallery-trigger-image" type="button" data-bs-toggle="modal" data-bs-target="#socialWorkModal" data-page-title="J &amp; A Tiles Trading" data-page-logo="images/home/social-ja-tiles-trading.webp" data-page-accent="#d82114" data-preview-image="images/social-media/ja-tiles-trading/image4ja.png" data-preview-alt="J and A Tiles Trading Facebook graphic, post 4" aria-haspopup="dialog" aria-label="Open J and A Tiles Trading post 4"><span class="social-preview-media social-preview-media-image"><img src="images/social-media/ja-tiles-trading/image4ja.png" alt="" width="1080" height="1080" loading="lazy" decoding="async"><span>Post 04</span></span><span class="social-preview-copy"><strong>Post 04</strong><small>Facebook graphic</small></span></button>
+                <button class="social-gallery-trigger social-gallery-trigger-image" type="button" data-bs-toggle="modal" data-bs-target="#socialWorkModal" data-page-title="J &amp; A Tiles Trading" data-page-logo="images/home/social-ja-tiles-trading.webp" data-page-accent="#d82114" data-preview-image="images/social-media/ja-tiles-trading/image5ja.png" data-preview-alt="J and A Tiles Trading Facebook graphic, post 5" aria-haspopup="dialog" aria-label="Open J and A Tiles Trading post 5"><span class="social-preview-media social-preview-media-image"><img src="images/social-media/ja-tiles-trading/image5ja.png" alt="" width="1080" height="1080" loading="lazy" decoding="async"><span>Post 05</span></span><span class="social-preview-copy"><strong>Post 05</strong><small>Facebook graphic</small></span></button>
+              </div>
+            </article>
+
+            <article class="social-brand-row social-brand-inkpoint" data-aos="fade-up">
+              <header class="social-brand-head">
+                <span class="social-brand-logo"><img src="images/home/social-inkpoint-prints-services.webp" alt="InkPoint Prints &amp; Services logo" width="640" height="640" loading="lazy" decoding="async"></span>
+                <div><small>Facebook page managed</small><h3>InkPoint Prints &amp; Services</h3></div><span class="social-brand-number" aria-hidden="true">03</span>
+              </header>
+              <div class="social-gallery-toolbar">
+                <p><strong>3 uploaded posts</strong><span>2 additional slots ready</span></p>
+                <div class="social-gallery-controls" role="group" aria-label="InkPoint Prints &amp; Services gallery controls">
+                  <button type="button" data-social-scroll="previous" aria-controls="inkpointGallery" aria-label="View previous InkPoint post"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
+                  <button type="button" data-social-scroll="next" aria-controls="inkpointGallery" aria-label="View next InkPoint post"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
+              </div>
+              <div id="inkpointGallery" class="social-brand-previews social-brand-previews-scroll" role="group" aria-label="InkPoint Prints &amp; Services selected Facebook posts">
+                <button class="social-gallery-trigger social-gallery-trigger-image" type="button" data-bs-toggle="modal" data-bs-target="#socialWorkModal" data-page-title="InkPoint Prints &amp; Services" data-page-logo="images/home/social-inkpoint-prints-services.webp" data-page-accent="#a20f1a" data-preview-image="images/social-media/inkpoint-prints-services/image1ip.png" data-preview-alt="InkPoint Prints &amp; Services Facebook graphic, post 1" aria-haspopup="dialog" aria-label="Open InkPoint Prints &amp; Services post 1"><span class="social-preview-media social-preview-media-image"><img src="images/social-media/inkpoint-prints-services/image1ip.png" alt="" width="2000" height="2000" loading="lazy" decoding="async"><span>Post 01</span></span><span class="social-preview-copy"><strong>Post 01</strong><small>Facebook graphic</small></span></button>
+                <button class="social-gallery-trigger social-gallery-trigger-image" type="button" data-bs-toggle="modal" data-bs-target="#socialWorkModal" data-page-title="InkPoint Prints &amp; Services" data-page-logo="images/home/social-inkpoint-prints-services.webp" data-page-accent="#a20f1a" data-preview-image="images/social-media/inkpoint-prints-services/image2ip.png" data-preview-alt="InkPoint Prints &amp; Services Facebook graphic, post 2" aria-haspopup="dialog" aria-label="Open InkPoint Prints &amp; Services post 2"><span class="social-preview-media social-preview-media-image"><img src="images/social-media/inkpoint-prints-services/image2ip.png" alt="" width="2000" height="2000" loading="lazy" decoding="async"><span>Post 02</span></span><span class="social-preview-copy"><strong>Post 02</strong><small>Facebook graphic</small></span></button>
+                <button class="social-gallery-trigger social-gallery-trigger-image" type="button" data-bs-toggle="modal" data-bs-target="#socialWorkModal" data-page-title="InkPoint Prints &amp; Services" data-page-logo="images/home/social-inkpoint-prints-services.webp" data-page-accent="#a20f1a" data-preview-image="images/social-media/inkpoint-prints-services/image3ip.png" data-preview-alt="InkPoint Prints &amp; Services Facebook graphic, post 3" aria-haspopup="dialog" aria-label="Open InkPoint Prints &amp; Services post 3"><span class="social-preview-media social-preview-media-image"><img src="images/social-media/inkpoint-prints-services/image3ip.png" alt="" width="2000" height="2000" loading="lazy" decoding="async"><span>Post 03</span></span><span class="social-preview-copy"><strong>Post 03</strong><small>Facebook graphic</small></span></button>
+                <div class="social-gallery-trigger social-gallery-placeholder" role="img" aria-label="InkPoint post 4 upload slot"><span class="social-preview-media"><span>Upload slot 4</span><i class="fa-regular fa-image" aria-hidden="true"></i><small>Awaiting image</small></span><span class="social-preview-copy"><strong>Post 04</strong><small>Ready for upload</small></span></div>
+                <div class="social-gallery-trigger social-gallery-placeholder" role="img" aria-label="InkPoint post 5 upload slot"><span class="social-preview-media"><span>Upload slot 5</span><i class="fa-regular fa-image" aria-hidden="true"></i><small>Awaiting image</small></span><span class="social-preview-copy"><strong>Post 05</strong><small>Ready for upload</small></span></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="websites" class="editorial-section home-card-section school-websites-section" aria-labelledby="deployedWebsitesTitle" data-section="06">
+        <div class="container">
+          <header class="editorial-section-head" data-aos="fade-up">
+            <span class="editorial-section-number">06 / Live websites</span>
+            <div><h2 id="deployedWebsitesTitle">Websites I developed.</h2></div>
+          </header>
+
+          <div class="school-website-grid" data-aos="fade-up">
+            <a class="school-website-card" href="https://inkpointph.vercel.app" target="_blank" rel="noopener" aria-label="Visit the deployed InkPoint Prints and Services website">
+              <span class="school-website-preview school-website-preview-inkpoint">
+                <span class="school-browser-bar" aria-hidden="true"><i></i><i></i><i></i><em>inkpointph.vercel.app</em></span>
+                <span class="school-preview-stage school-preview-stage-image"><img src="images/projects/websites/inkpoint-web.png" alt="InkPoint Prints and Services website homepage" width="1861" height="930" loading="lazy" decoding="async"></span>
+              </span>
+              <span class="school-website-copy"><small>Business website · Live</small><strong>InkPoint Prints &amp; Services</strong><span>Printing services website</span><em>Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></em></span>
+            </a>
+
+            <a class="school-website-card" href="https://edunexus-prototype-qt5y.vercel.app" target="_blank" rel="noopener" aria-label="Visit the deployed EduNexus website">
+              <span class="school-website-preview school-website-preview-edunexus">
+                <span class="school-browser-bar" aria-hidden="true"><i></i><i></i><i></i><em>edunexus-prototype-qt5y.vercel.app</em></span>
+                <span class="school-preview-stage school-preview-stage-image"><img src="images/projects/websites/edunexus.png" alt="EduNexus Balili Elementary School website homepage" width="1868" height="931" loading="lazy" decoding="async"></span>
+              </span>
+              <span class="school-website-copy"><small>Education platform · Live</small><strong>EduNexus</strong><span>Balili Elementary School prototype</span><em>Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></em></span>
+            </a>
+
+            <a class="school-website-card" href="https://brain-bolt-kuht.vercel.app" target="_blank" rel="noopener" aria-label="Visit the deployed BrainBolt website">
+              <span class="school-website-preview school-website-preview-brainbolt">
+                <span class="school-browser-bar" aria-hidden="true"><i></i><i></i><i></i><em>brain-bolt-kuht.vercel.app</em></span>
+                <span class="school-preview-stage school-preview-stage-image"><img src="images/projects/websites/brainbolt.png" alt="BrainBolt critical-thinking web game homepage" width="1861" height="930" loading="lazy" decoding="async"></span>
+              </span>
+              <span class="school-website-copy"><small>Web game · Live</small><strong>BrainBolt</strong><span>Critical-thinking challenges</span><em>Visit website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></em></span>
+            </a>
+          </div>
+
+          <p class="editorial-section-footer"><a class="editorial-inline-link" href="projects.html#software-projects">View all development projects <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+        </div>
+      </section>
+
+      <section id="recognition" class="editorial-section home-card-section" aria-labelledby="recognitionTitle" data-section="07">
+        <div class="container">
+          <header class="editorial-section-head" data-aos="fade-up">
+            <span class="editorial-section-number">07 / Recognition</span>
+            <div><h2 id="recognitionTitle">Recognition &amp; contribution.</h2></div>
+          </header>
+
+          <ul class="editorial-recognition-list" data-aos="fade-up">
+            <li><a class="editorial-row-link" href="credentials.html#credential-best-presentation"><span class="editorial-row-marker">Award</span><img class="editorial-certificate-thumb" src="images/home/credential-best-presentation.webp" alt="" width="320" height="216" loading="lazy" decoding="async"><span class="editorial-row-copy"><small>Project T.I.T.A.N.</small><strong>Best Presentation Award</strong><span>Recognition for the presentation of ProLance Lite.</span></span><i class="fa-solid fa-arrow-right editorial-row-arrow" aria-hidden="true"></i></a></li>
+            <li><a class="editorial-row-link" href="credentials.html#credential-smart-city"><span class="editorial-row-marker">Third</span><img class="editorial-certificate-thumb" src="images/home/credential-smart-city.webp" alt="" width="320" height="216" loading="lazy" decoding="async"><span class="editorial-row-copy"><small>Smart City Convergence 2025</small><strong>Third Place</strong><span>Competition recognition connected to the Tignay application concept.</span></span><i class="fa-solid fa-arrow-right editorial-row-arrow" aria-hidden="true"></i></a></li>
+            <li><a class="editorial-row-link" href="credentials.html#credential-working-committee"><span class="editorial-row-marker">Service</span><img class="editorial-certificate-thumb" src="images/home/credential-working-committee.webp" alt="" width="320" height="216" loading="lazy" decoding="async"><span class="editorial-row-copy"><small>Founder's Day Celebration</small><strong>Working Committee Member</strong><span>Documented contribution to campus event operations.</span></span><i class="fa-solid fa-arrow-right editorial-row-arrow" aria-hidden="true"></i></a></li>
+          </ul>
+          <p class="editorial-section-footer"><a class="editorial-inline-link" href="credentials.html">View all credentials <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></p>
+        </div>
+      </section>
+
+      <section id="contact" class="editorial-section editorial-contact" aria-labelledby="contactTitle" data-section="08">
+        <div class="container editorial-contact-layout" data-aos="fade-up">
+          <header>
+            <span class="editorial-section-number">08 / Contact</span>
+            <h2 id="contactTitle">Need dependable support for your leads, clients, content, or daily operations?</h2>
+          </header>
+          <div class="editorial-contact-actions">
+            <a class="editorial-email" href="mailto:bjjoshuagarciab@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i> bjjoshuagarciab@gmail.com</a>
+            <nav class="editorial-contact-links" aria-label="Contact options"><a href="contact.html"><i class="fa-solid fa-address-card" aria-hidden="true"></i> Contact page</a><a href="https://github.com/bustamante-j" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a><a href="https://www.linkedin.com/in/bjgbustamante" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a></nav>
           </div>
         </div>
       </section>
     </main>
 
+    <div class="modal fade social-work-modal" id="socialWorkModal" tabindex="-1" aria-labelledby="socialWorkModalTitle" aria-describedby="socialWorkModalDescription">
+      <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="social-modal-identity">
+              <span class="social-modal-logo"><img id="socialWorkModalLogo" src="images/home/social-rm-tiles-center.webp" alt="" width="640" height="640"></span>
+              <div><small>Selected social media work</small><h2 class="modal-title" id="socialWorkModalTitle">R &amp; M Tiles Center</h2></div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close sample work preview"></button>
+          </div>
+          <div class="modal-body">
+            <p id="socialWorkModalDescription" class="social-modal-intro">Selected social media work created for <strong data-social-page-name>R &amp; M Tiles Center</strong>.</p>
+            <figure id="socialWorkSelectedPreview" class="social-modal-selected-preview" hidden>
+              <img id="socialWorkPreviewImage" src="images/social-media/rm-tiles-center/image1.png" alt="" width="1080" height="1080">
+              <figcaption id="socialWorkPreviewCaption">Facebook graphic</figcaption>
+            </figure>
+            <div id="socialWorkPlaceholderGrid" class="social-preview-grid">
+              <figure class="social-preview-card">
+                <div class="social-preview-placeholder social-preview-post"><span>Post 01</span><i class="fa-regular fa-image" aria-hidden="true"></i><strong>Post screenshot</strong><small>Placeholder</small></div>
+                <figcaption><small>Facebook post</small><strong>Campaign creative</strong></figcaption>
+              </figure>
+              <figure class="social-preview-card">
+                <div class="social-preview-placeholder social-preview-post"><span>Post 02</span><i class="fa-regular fa-images" aria-hidden="true"></i><strong>Post screenshot</strong><small>Placeholder</small></div>
+                <figcaption><small>Facebook post</small><strong>Product or service feature</strong></figcaption>
+              </figure>
+              <figure class="social-preview-card social-preview-card-reel">
+                <div class="social-preview-placeholder social-preview-reel"><span>Reel 01</span><i class="fa-solid fa-play" aria-hidden="true"></i><strong>Reel cover</strong><small>Placeholder</small></div>
+                <figcaption><small>Facebook reel</small><strong>Short-form video</strong></figcaption>
+              </figure>
+            </div>
+            <p id="socialWorkPlaceholderNote" class="social-modal-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Replace these placeholders with your actual screenshots and reel cover when they are ready.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer class="footer">
       <div class="container footer-inner">
-        <div class="socials" aria-label="Social links">
-          <a href="https://www.linkedin.com/in/bjgbustamante" aria-label="LinkedIn profile" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
-          <a href="https://github.com/bustamante-j" aria-label="GitHub profile" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-          <a href="https://www.facebook.com/b.joshuaB/" aria-label="Facebook profile" target="_blank" rel="noopener"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+        <div class="footer-identity">
+          <a class="footer-name" href="index.html">Blessed Joshua G. Bustamante</a>
+          <p>Virtual Assistant · Real Estate Support · Social Media Management · Baguio City, Philippines</p>
+          <small class="footer-meta">© <span id="year"></span> · All rights reserved</small>
+        </div>
+        <div class="socials" role="group" aria-label="Social links">
+          <a href="https://www.linkedin.com/in/bjgbustamante" aria-label="LinkedIn profile" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i><span>LinkedIn</span></a>
+          <a href="https://github.com/bustamante-j" aria-label="GitHub profile" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a>
+          <a href="https://www.facebook.com/b.joshuaB/" aria-label="Facebook profile" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i><span>Facebook</span></a>
+          <a href="mailto:bjjoshuagarciab@gmail.com" aria-label="Send an email"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Email</span></a>
         </div>
       </div>
     </footer>
 
-    <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">
-      <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
-    </button>
+    <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-chevron-up" aria-hidden="true"></i></button>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
-    <script src="js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer></script>
+    <script type="module" src="js/script.js"></script>
   </body>
 </html>
