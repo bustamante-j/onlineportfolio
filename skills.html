@@ -1,79 +1,200 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="The technical skills, tools, and professional strengths I am currently developing." />
-    <meta name="theme-color" content="#c62828" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Virtual assistance, real estate support, social media, customer service, administrative, digital marketing, and technology skills.">
+    <meta name="theme-color" content="#681827">
     <title>Skills | Blessed Joshua G. Bustamante</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"><link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet"><link href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"><link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page-enter">
+  <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <div id="loading" role="status" aria-live="polite" aria-label="Loading portfolio"><div class="loader-content"><strong>Loading my skills</strong><span class="loader-line" aria-hidden="true"><i></i></span></div></div>
+    <nav id="mainNav" class="navbar navbar-expand-lg site-nav" aria-label="Primary navigation">
+      <div class="container">
+        <a class="navbar-brand brand-lockup" href="index.html" aria-label="Blessed Joshua home">
+          <span class="brand-copy"><strong>Blessed Joshua</strong><span>Remote Operations &middot; IT</span></span>
+        </a>
 
-    <nav id="mainNav" class="navbar navbar-expand-lg site-nav" aria-label="Primary navigation"><div class="container">
-      <a class="navbar-brand brand-lockup" href="index.html" aria-label="Blessed Joshua home"><span class="brand-mark" aria-hidden="true"><img src="images/profile/Profile.png" alt="Blessed Joshua" class="brand-mark-img" width="44" height="44"></span><span class="brand-copy"><strong>Blessed Joshua</strong><span>BSIT Student</span></span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="navMenu"><ul class="navbar-nav ms-auto align-items-lg-center"><li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="about.html">About</a></li><li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li><li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li><li class="nav-item"><a class="nav-link" href="projects.html">Work</a></li><li class="nav-item"><a class="nav-link" href="credentials.html">Credentials</a></li><li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li><li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li><li class="nav-item ms-lg-3"><button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode"><i class="fa-solid fa-moon" aria-hidden="true"></i></button></li></ul></div>
-    </div></nav>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+            <li class="nav-item"><a class="nav-link" href="projects.html">Work</a></li>
+            <li class="nav-item"><a class="nav-link" href="credentials.html">Credentials</a></li>
+            <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+          <div class="nav-utility">
+            <button id="themeToggle" class="theme-toggle nav-theme-control" type="button" aria-pressed="false" aria-label="Toggle dark mode"><i class="fa-solid fa-moon" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+    </nav>
 
     <main id="main">
       <section class="section section-tint">
         <div class="container">
-          <div class="section-header" data-aos="fade-up">
-            <p class="eyebrow">My Skills</p>
-            <h1>I am developing useful technical abilities and dependable professional habits.</h1>
-            <p>I do not use percentage bars because I am still learning. These are areas where I have coursework, project exposure, practical familiarity, or active study.</p>
+          <div class="section-header section-header-compact" data-aos="fade-up">
+            <h1>Skills</h1>
           </div>
 
-          <div class="skill-category-grid">
-            <article class="skill-category-card" data-aos="fade-up">
-              <div class="skill-category-head"><span class="section-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span><div><p class="eyebrow">Technical</p><h2>Development & Digital Skills</h2></div></div>
-              <div class="skill-list">
-                <span class="skill-item"><strong>Web Development</strong><em>Growing experience</em></span>
-                <span class="skill-item"><strong>Simple Mobile App Development</strong><em>Currently learning</em></span>
-                <span class="skill-item"><strong>AI Prompt Engineering</strong><em>Applied learning tool</em></span>
-                <span class="skill-item"><strong>Intermediate Graphic Design</strong><em>Practical experience</em></span>
-                <span class="skill-item"><strong>Computer Literacy</strong><em>Practical experience</em></span>
-                <span class="skill-item"><strong>Touch Typing</strong><em>Working skill</em></span>
-              </div>
-            </article>
+          <div class="skill-directory" data-aos="fade-up">
+            <div class="skill-directory-list">
+              <section class="skill-directory-group">
+                <header class="skills-panel-head"><div><p class="eyebrow">Lead operations</p><h2>Real Estate Virtual Assistance</h2></div></header>
+                <ul class="capability-grid">
+                  <li><i class="fa-solid fa-user-check" aria-hidden="true"></i><span><strong>Lead Qualification</strong><em>Seller screening and LPMAMA</em></span></li>
+                  <li><i class="fa-solid fa-phone-volume" aria-hidden="true"></i><span><strong>Lead Prospecting</strong><em>Outbound support and rapport building</em></span></li>
+                  <li><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i><span><strong>Lead Follow-Up</strong><em>Nurturing and pending actions</em></span></li>
+                  <li><i class="fa-solid fa-calendar-check" aria-hidden="true"></i><span><strong>Appointment Support</strong><em>Qualification and scheduling</em></span></li>
+                  <li><i class="fa-solid fa-chart-column" aria-hidden="true"></i><span><strong>CRM Management</strong><em>Pipelines, notes, and follow-up tasks</em></span></li>
+                  <li><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i><span><strong>Lead Auditing</strong><em>Communication history and missed follow-up</em></span></li>
+                  <li><i class="fa-solid fa-house-circle-check" aria-hidden="true"></i><span><strong>Property Research</strong><em>Owners, sellers, and comparable properties</em></span></li>
+                  <li><i class="fa-solid fa-file-signature" aria-hidden="true"></i><span><strong>Record Keeping</strong><em>Files, spreadsheets, and status notes</em></span></li>
+                </ul>
+              </section>
 
-            <article class="skill-category-card" data-aos="fade-up" data-aos-delay="70">
-              <div class="skill-category-head"><span class="section-icon"><i class="fa-solid fa-terminal" aria-hidden="true"></i></span><div><p class="eyebrow">Technologies</p><h2>Languages & Platforms</h2></div></div>
-              <div class="technology-cloud">
-                <span><i class="fa-brands fa-html5" aria-hidden="true"></i> HTML</span><span><i class="fa-brands fa-css3-alt" aria-hidden="true"></i> CSS</span><span><i class="fa-brands fa-js" aria-hidden="true"></i> JavaScript</span><span><i class="fa-brands fa-php" aria-hidden="true"></i> PHP</span><span><i class="fa-brands fa-python" aria-hidden="true"></i> Python</span><span><i class="fa-brands fa-java" aria-hidden="true"></i> Java</span><span><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Laravel</span><span><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i> Flutter</span><span><i class="fa-brands fa-unity" aria-hidden="true"></i> Unity</span>
-              </div>
-              <p class="skill-disclaimer"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> I have slight or introductory experience with these technologies and continue to study them through guided and academic projects.</p>
-            </article>
+              <section class="skill-directory-group">
+                <header class="skills-panel-head"><div><p class="eyebrow">Content operations</p><h2>Social Media &amp; Digital Marketing</h2></div></header>
+                <ul class="capability-grid">
+                  <li><i class="fa-solid fa-bullseye" aria-hidden="true"></i><span><strong>Content Strategy</strong><em>Audience, goals, and brand direction</em></span></li>
+                  <li><i class="fa-solid fa-calendar-days" aria-hidden="true"></i><span><strong>Content Calendars</strong><em>Weekly planning and organization</em></span></li>
+                  <li><i class="fa-solid fa-pen-ruler" aria-hidden="true"></i><span><strong>Content Creation</strong><em>Promotional, educational, and product posts</em></span></li>
+                  <li><i class="fa-solid fa-video" aria-hidden="true"></i><span><strong>Short-Form Video</strong><em>Reels and social video editing</em></span></li>
+                  <li><i class="fa-solid fa-quote-left" aria-hidden="true"></i><span><strong>Social Copy</strong><em>Captions, hooks, and calls to action</em></span></li>
+                  <li><i class="fa-solid fa-clock" aria-hidden="true"></i><span><strong>Scheduling &amp; Publishing</strong><em>Meta Business Suite workflows</em></span></li>
+                  <li><i class="fa-solid fa-comments" aria-hidden="true"></i><span><strong>Community Management</strong><em>Comments and message support</em></span></li>
+                  <li><i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i><span><strong>Market Research</strong><em>Competitors, trends, and products</em></span></li>
+                </ul>
+              </section>
 
-            <article class="skill-category-card" data-aos="fade-up">
-              <div class="skill-category-head"><span class="section-icon"><i class="fa-solid fa-toolbox" aria-hidden="true"></i></span><div><p class="eyebrow">Workflow</p><h2>Tools I Use</h2></div></div>
-              <div class="tool-tile-grid">
-                <span><i class="fa-solid fa-code" aria-hidden="true"></i><strong>VS Code</strong></span><span><i class="fa-brands fa-github" aria-hidden="true"></i><strong>GitHub</strong></span><span><i class="fa-solid fa-database" aria-hidden="true"></i><strong>MySQL</strong></span><span><i class="fa-solid fa-robot" aria-hidden="true"></i><strong>ChatGPT</strong></span><span><i class="fa-solid fa-brain" aria-hidden="true"></i><strong>Claude</strong></span><span><i class="fa-solid fa-palette" aria-hidden="true"></i><strong>Canva</strong></span><span><i class="fa-solid fa-file-word" aria-hidden="true"></i><strong>Microsoft Office</strong></span><span><i class="fa-solid fa-file-lines" aria-hidden="true"></i><strong>Google Docs</strong></span>
-              </div>
-            </article>
+              <section class="skill-directory-group">
+                <header class="skills-panel-head"><div><p class="eyebrow">Client communication</p><h2>Customer &amp; Client Support</h2></div></header>
+                <ul class="capability-grid">
+                  <li><i class="fa-solid fa-phone" aria-hidden="true"></i><span><strong>Phone Communication</strong><em>Professional customer conversations</em></span></li>
+                  <li><i class="fa-solid fa-envelope" aria-hidden="true"></i><span><strong>Email Communication</strong><em>Clear written follow-through</em></span></li>
+                  <li><i class="fa-solid fa-handshake" aria-hidden="true"></i><span><strong>Rapport Building</strong><em>Respectful, customer-focused interaction</em></span></li>
+                  <li><i class="fa-solid fa-comments-dollar" aria-hidden="true"></i><span><strong>Objection Handling</strong><em>Patient and practical responses</em></span></li>
+                  <li><i class="fa-solid fa-note-sticky" aria-hidden="true"></i><span><strong>Interaction Notes</strong><em>Accurate call and message documentation</em></span></li>
+                  <li><i class="fa-solid fa-people-arrows-left-right" aria-hidden="true"></i><span><strong>Community Engagement</strong><em>Comments, messages, and public replies</em></span></li>
+                </ul>
+              </section>
 
-            <article class="skill-category-card" data-aos="fade-up" data-aos-delay="70">
-              <div class="skill-category-head"><span class="section-icon"><i class="fa-solid fa-handshake" aria-hidden="true"></i></span><div><p class="eyebrow">Professional strengths</p><h2>How I Work With People</h2></div></div>
-              <ul class="soft-skill-list">
-                <li><i class="fa-solid fa-comments" aria-hidden="true"></i><span><strong>Communication</strong>Clear communication and public speaking</span></li>
-                <li><i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i><span><strong>Problem-solving</strong>Patient, practical, and willing to ask questions</span></li>
-                <li><i class="fa-solid fa-clock" aria-hidden="true"></i><span><strong>Time management</strong>Balancing academics, activities, and projects</span></li>
-                <li><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i><span><strong>Adaptability</strong>Comfortable learning new tools and processes</span></li>
-                <li><i class="fa-solid fa-users" aria-hidden="true"></i><span><strong>Team collaboration</strong>Experience supporting events and group work</span></li>
-                <li><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><span><strong>Attention to detail</strong>Developed through records, inventory, and project tasks</span></li>
-              </ul>
-            </article>
+              <section class="skill-directory-group">
+                <header class="skills-panel-head"><div><p class="eyebrow">Organized execution</p><h2>Administrative &amp; Project Support</h2></div></header>
+                <ul class="capability-grid">
+                  <li><i class="fa-solid fa-keyboard" aria-hidden="true"></i><span><strong>Data Entry</strong><em>Accurate and consistent records</em></span></li>
+                  <li><i class="fa-solid fa-table" aria-hidden="true"></i><span><strong>Spreadsheet Management</strong><em>Structured tracking and updates</em></span></li>
+                  <li><i class="fa-solid fa-list-check" aria-hidden="true"></i><span><strong>Task Management</strong><em>Priorities, deadlines, and follow-ups</em></span></li>
+                  <li><i class="fa-solid fa-diagram-project" aria-hidden="true"></i><span><strong>Project Coordination</strong><em>Timelines and deliverable tracking</em></span></li>
+                  <li><i class="fa-solid fa-chart-line" aria-hidden="true"></i><span><strong>Progress Reporting</strong><em>Status updates and pending actions</em></span></li>
+                  <li><i class="fa-solid fa-folder-tree" aria-hidden="true"></i><span><strong>Workflow Documentation</strong><em>Files, processes, and client records</em></span></li>
+                </ul>
+              </section>
+
+              <section class="skill-directory-group">
+                <header class="skills-panel-head"><div><p class="eyebrow">Technology-assisted work</p><h2>Digital &amp; AI Operations</h2></div></header>
+                <ul class="capability-grid">
+                  <li><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i><span><strong>AI-Assisted Research</strong><em>Research, brainstorming, and synthesis</em></span></li>
+                  <li><i class="fa-solid fa-lightbulb" aria-hidden="true"></i><span><strong>Content Ideation</strong><em>Copy and visual concept development</em></span></li>
+                  <li><i class="fa-solid fa-bullhorn" aria-hidden="true"></i><span><strong>Marketing Support</strong><em>Email and SMS support</em></span></li>
+                  <li><i class="fa-solid fa-window-maximize" aria-hidden="true"></i><span><strong>Website Updates</strong><em>Web and landing-page content support</em></span></li>
+                  <li><i class="fa-solid fa-cloud" aria-hidden="true"></i><span><strong>Cloud Collaboration</strong><em>Remote files, meetings, and communication</em></span></li>
+                  <li><i class="fa-solid fa-laptop-code" aria-hidden="true"></i><span><strong>Web Development</strong><em>HTML, CSS, JavaScript, and application study</em></span></li>
+                </ul>
+              </section>
+
+              <section id="tools" class="skill-directory-group skill-directory-tools">
+                <header class="skills-panel-head"><div><p class="eyebrow">Platforms and workflow</p><h2>Tools I Use</h2></div></header>
+                <div class="tool-group-grid">
+                  <article class="tool-group">
+                    <h3>Real Estate</h3>
+                    <ul class="tool-logo-list">
+                      <li><i class="fa-solid fa-chart-simple" aria-hidden="true"></i><strong>Sierra Interactive</strong></li>
+                      <li><i class="fa-solid fa-house" aria-hidden="true"></i><strong>Zillow</strong></li>
+                      <li><i class="fa-solid fa-location-crosshairs" aria-hidden="true"></i><strong>DirectSkip</strong></li>
+                      <li><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i><strong>PropWire</strong></li>
+                      <li><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><strong>Skipify</strong></li>
+                      <li><i class="fa-solid fa-message" aria-hidden="true"></i><strong>Smarter Contact</strong></li>
+                    </ul>
+                  </article>
+                  <article class="tool-group">
+                    <h3>Content &amp; Design</h3>
+                    <ul class="tool-logo-list">
+                      <li><i class="fa-brands fa-meta" aria-hidden="true"></i><strong>Meta Business Suite</strong></li>
+                      <li><i class="devicon-canva-original colored" aria-hidden="true"></i><strong>Canva</strong></li>
+                      <li><i class="devicon-photoshop-plain colored" aria-hidden="true"></i><strong>Photoshop</strong></li>
+                      <li><i class="fa-solid fa-scissors" aria-hidden="true"></i><strong>CapCut</strong></li>
+                    </ul>
+                  </article>
+                  <article class="tool-group">
+                    <h3>AI Productivity</h3>
+                    <ul class="tool-logo-list">
+                      <li><i class="fa-solid fa-comment-dots" aria-hidden="true"></i><strong>ChatGPT</strong></li>
+                      <li><i class="fa-solid fa-brain" aria-hidden="true"></i><strong>Claude</strong></li>
+                      <li><i class="fa-solid fa-gem" aria-hidden="true"></i><strong>Gemini</strong></li>
+                      <li><i class="fa-solid fa-film" aria-hidden="true"></i><strong>Sora</strong></li>
+                      <li><i class="fa-solid fa-image" aria-hidden="true"></i><strong>Midjourney</strong></li>
+                    </ul>
+                  </article>
+                  <article class="tool-group">
+                    <h3>Productivity &amp; Collaboration</h3>
+                    <ul class="tool-logo-list">
+                      <li><i class="fa-brands fa-google" aria-hidden="true"></i><strong>Google Workspace</strong></li>
+                      <li><i class="fa-brands fa-microsoft" aria-hidden="true"></i><strong>Microsoft Office</strong></li>
+                      <li><i class="fa-solid fa-list-check" aria-hidden="true"></i><strong>Asana</strong></li>
+                      <li><i class="fa-solid fa-video" aria-hidden="true"></i><strong>Zoom</strong></li>
+                      <li><i class="fa-brands fa-slack" aria-hidden="true"></i><strong>Slack</strong></li>
+                      <li><i class="fa-brands fa-discord" aria-hidden="true"></i><strong>Discord</strong></li>
+                      <li><i class="fa-solid fa-display" aria-hidden="true"></i><strong>AnyDesk</strong></li>
+                      <li><i class="fa-solid fa-file-pdf" aria-hidden="true"></i><strong>PDF Tools</strong></li>
+                    </ul>
+                  </article>
+                  <article class="tool-group tool-group-wide">
+                    <h3>Technology Foundation</h3>
+                    <ul class="tool-logo-list">
+                      <li><i class="fa-brands fa-html5" aria-hidden="true"></i><strong>HTML</strong></li>
+                      <li><i class="fa-brands fa-css3-alt" aria-hidden="true"></i><strong>CSS</strong></li>
+                      <li><i class="fa-brands fa-js" aria-hidden="true"></i><strong>JavaScript</strong></li>
+                      <li><i class="fa-brands fa-php" aria-hidden="true"></i><strong>PHP</strong></li>
+                      <li><i class="fa-brands fa-laravel" aria-hidden="true"></i><strong>Laravel</strong></li>
+                      <li><i class="devicon-mysql-original colored" aria-hidden="true"></i><strong>MySQL</strong></li>
+                      <li><i class="devicon-vscode-plain colored" aria-hidden="true"></i><strong>VS Code</strong></li>
+                      <li><i class="devicon-github-original" aria-hidden="true"></i><strong>GitHub</strong></li>
+                    </ul>
+                  </article>
+                </div>
+              </section>
+
+              <section class="skill-directory-group">
+                <header class="skills-panel-head"><div><p class="eyebrow">Professional strengths</p><h2>How I Work</h2></div></header>
+                <ul class="strength-grid">
+                  <li><i class="fa-solid fa-comments" aria-hidden="true"></i><span><strong>English Communication</strong>Clear phone, email, and written communication</span></li>
+                  <li><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><span><strong>Attention to Detail</strong>Accurate records and careful follow-through</span></li>
+                  <li><i class="fa-solid fa-folder-open" aria-hidden="true"></i><span><strong>Organization</strong>Structured files, tasks, and priorities</span></li>
+                  <li><i class="fa-solid fa-clock" aria-hidden="true"></i><span><strong>Time Management</strong>Managing parallel workflows and deadlines</span></li>
+                  <li><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i><span><strong>Adaptability</strong>Fast learning across tools and processes</span></li>
+                  <li><i class="fa-solid fa-house-laptop" aria-hidden="true"></i><span><strong>Independent Remote Work</strong>Reliable execution with clear updates</span></li>
+                  <li><i class="fa-solid fa-brain" aria-hidden="true"></i><span><strong>Critical Thinking</strong>Practical research and problem-solving</span></li>
+                  <li><i class="fa-solid fa-layer-group" aria-hidden="true"></i><span><strong>Multitasking</strong>Prioritizing work without losing accuracy</span></li>
+                </ul>
+              </section>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer"><div class="container footer-inner"><div class="socials" aria-label="Social links"><a href="https://www.linkedin.com/in/bjgbustamante" aria-label="LinkedIn profile" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a><a href="https://github.com/bustamante-j" aria-label="GitHub profile" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i></a><a href="https://www.facebook.com/b.joshuaB/" aria-label="Facebook profile" target="_blank" rel="noopener"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a></div></div></footer>
+    <footer class="footer"><div class="container footer-inner"><div class="footer-identity"><a class="footer-name" href="index.html">Blessed Joshua G. Bustamante</a><p>Virtual Assistant · Real Estate Support · Social Media Management · Baguio City, Philippines</p><small class="footer-meta">© <span id="year"></span> · All rights reserved</small></div><div class="socials" role="group" aria-label="Social links"><a href="https://www.linkedin.com/in/bjgbustamante" aria-label="LinkedIn profile" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i><span>LinkedIn</span></a><a href="https://github.com/bustamante-j" aria-label="GitHub profile" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a><a href="https://www.facebook.com/b.joshuaB/" aria-label="Facebook profile" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i><span>Facebook</span></a><a href="mailto:bjjoshuagarciab@gmail.com" aria-label="Send an email"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Email</span></a></div></div></footer>
     <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-chevron-up" aria-hidden="true"></i></button>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script><script src="js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer></script>
+    <script type="module" src="js/script.js"></script>
   </body>
 </html>
