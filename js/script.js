@@ -221,18 +221,61 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  document.querySelectorAll("[data-social-scroll]").forEach((control) => {
+  document.querySelectorAll("[data-social-scroll], [data-horizontal-scroll]").forEach((control) => {
     const galleryId = control.getAttribute("aria-controls");
     const gallery = galleryId ? document.getElementById(galleryId) : null;
     if (!gallery) return;
 
     control.addEventListener("click", () => {
-      const direction = control.dataset.socialScroll === "previous" ? -1 : 1;
+      const requestedDirection = control.dataset.socialScroll || control.dataset.horizontalScroll;
+      const direction = requestedDirection === "previous" ? -1 : 1;
       gallery.scrollBy({
         left: direction * Math.max(240, gallery.clientWidth * 0.72),
         behavior: prefersReducedMotion ? "auto" : "smooth"
       });
     });
+  });
+
+  document.querySelectorAll("[data-reel-src]").forEach((card) => {
+    const video = card.querySelector("video");
+    const source = card.dataset.reelSrc;
+    if (!video || !source) return;
+
+    video.addEventListener("loadedmetadata", () => {
+      video.controls = true;
+      card.classList.add("has-media");
+      card.classList.remove("is-empty");
+    }, { once: true });
+
+    video.addEventListener("error", () => {
+      card.classList.add("is-empty");
+    }, { once: true });
+
+    video.src = source;
+    video.load();
+  });
+
+  document.querySelectorAll("[data-commission-src]").forEach((card) => {
+    const stage = card.querySelector(".commission-upload-stage");
+    const source = card.dataset.commissionSrc;
+    if (!stage || !source) return;
+
+    const image = new Image();
+    image.loading = "lazy";
+    image.decoding = "async";
+    image.alt = card.dataset.commissionAlt || "Selected flyer or commissioned design";
+
+    image.addEventListener("load", () => {
+      stage.prepend(image);
+      card.classList.add("has-media");
+      card.classList.remove("is-empty");
+    }, { once: true });
+
+    image.addEventListener("error", () => {
+      card.classList.add("is-empty");
+    }, { once: true });
+
+    image.src = source;
   });
 
   const bindTabKeyboard = (tabs, activate) => {
