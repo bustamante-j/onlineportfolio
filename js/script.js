@@ -177,6 +177,39 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  document.querySelectorAll("[data-tool-logo]").forEach((mark) => {
+    const source = mark.dataset.toolLogo;
+    if (!source) return;
+
+    const logo = new Image();
+    logo.alt = "";
+    logo.decoding = "async";
+
+    logo.addEventListener("load", () => {
+      mark.prepend(logo);
+      mark.classList.add("is-logo-loaded");
+    }, { once: true });
+
+    logo.src = source;
+  });
+
+  document.querySelectorAll("[data-experience-image]").forEach((card) => {
+    const source = card.dataset.experienceImage;
+    if (!source) return;
+
+    const image = new Image();
+    image.className = "experience-card-background";
+    image.alt = "";
+    image.decoding = "async";
+
+    image.addEventListener("load", () => {
+      card.prepend(image);
+      card.classList.add("has-experience-image");
+    }, { once: true });
+
+    image.src = source;
+  });
+
   const socialWorkModal = document.getElementById("socialWorkModal");
   const socialWorkModalTitle = document.getElementById("socialWorkModalTitle");
   const socialWorkModalLogo = document.getElementById("socialWorkModalLogo");
@@ -236,18 +269,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const reelCounter = document.querySelector("[data-reel-count]");
+  let loadedReelCount = 0;
+
   document.querySelectorAll("[data-reel-src]").forEach((card) => {
     const video = card.querySelector("video");
     const source = card.dataset.reelSrc;
     if (!video || !source) return;
 
+    card.hidden = true;
+
     video.addEventListener("loadedmetadata", () => {
       video.controls = true;
+      card.hidden = false;
       card.classList.add("has-media");
       card.classList.remove("is-empty");
+      loadedReelCount += 1;
+      if (reelCounter) reelCounter.textContent = String(loadedReelCount);
     }, { once: true });
 
     video.addEventListener("error", () => {
+      card.hidden = true;
       card.classList.add("is-empty");
     }, { once: true });
 
@@ -255,23 +297,33 @@ document.addEventListener("DOMContentLoaded", () => {
     video.load();
   });
 
+  const sideProjectCounter = document.querySelector("[data-side-project-count]");
+  let loadedSideProjectCount = document.querySelectorAll(".commission-upload-card.has-media").length;
+  if (sideProjectCounter) sideProjectCounter.textContent = String(loadedSideProjectCount);
+
   document.querySelectorAll("[data-commission-src]").forEach((card) => {
     const stage = card.querySelector(".commission-upload-stage");
     const source = card.dataset.commissionSrc;
     if (!stage || !source) return;
 
+    card.hidden = true;
+
     const image = new Image();
-    image.loading = "lazy";
+    image.loading = "eager";
     image.decoding = "async";
     image.alt = card.dataset.commissionAlt || "Selected flyer or commissioned design";
 
     image.addEventListener("load", () => {
       stage.prepend(image);
+      card.hidden = false;
       card.classList.add("has-media");
       card.classList.remove("is-empty");
+      loadedSideProjectCount += 1;
+      if (sideProjectCounter) sideProjectCounter.textContent = String(loadedSideProjectCount);
     }, { once: true });
 
     image.addEventListener("error", () => {
+      card.hidden = true;
       card.classList.add("is-empty");
     }, { once: true });
 

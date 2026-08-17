@@ -1840,6 +1840,68 @@ img {
   display: grid;
 }
 
+.skill-directory .tool-logo-list .tool-logo-mark {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  color: var(--red);
+}
+
+.skill-directory .tool-logo-list .tool-logo-mark > i {
+  font-size: clamp(1.55rem, 3vw, 2.15rem);
+}
+
+.skill-directory .tool-logo-list .tool-logo-mark > iconify-icon {
+  font-size: clamp(1.55rem, 3vw, 2.15rem);
+}
+
+.skill-directory .tool-logo-list .tool-logo-mark img {
+  display: none;
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.skill-directory .tool-logo-list .tool-logo-mark.is-logo-loaded img {
+  display: block;
+}
+
+.skill-directory .tool-logo-list .tool-logo-mark.is-logo-loaded > i {
+  display: none;
+}
+
+.skill-directory .tool-logo-mark[data-tool-logo$="telelisting.png"] img,
+.skill-directory .tool-logo-mark[data-tool-logo$="directskip.png"] img {
+  width: 54px;
+  height: 54px;
+  max-width: none;
+  transform: scale(1.1);
+}
+
+.skill-directory .tool-logo-mark[data-tool-logo$="propwire.png"] img {
+  width: 40px;
+  height: 40px;
+  clip-path: inset(7% round 18%);
+  transform: scale(1.1);
+}
+
+.skill-directory .tool-logo-mark[data-tool-logo$="sejda-pdf.png"] img {
+  width: 40px;
+  height: 40px;
+  clip-path: circle(48% at 50% 50%);
+}
+
+.skill-directory .tool-logo-mark[data-tool-logo$="ringcentral.png"] img,
+.skill-directory .tool-logo-mark[data-tool-logo$="opusclip.png"] img {
+  width: 40px;
+  height: 40px;
+}
+
+.skill-directory .tool-logo-mark[data-tool-logo$="opusclip.png"] img {
+  border-radius: 10px;
+}
+
 .skill-directory :is(.technology-grid, .tool-logo-list) strong {
   color: var(--ink);
   font-size: 0.68rem;
