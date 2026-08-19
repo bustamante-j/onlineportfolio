@@ -131,18 +131,95 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
   });
 
-  const revealItems = Array.from(document.querySelectorAll(
+  const homePage = document.querySelector(".editorial-home");
+  const homeMotionItems = new Set();
+  const homeMotionContainers = new Set();
+  const homeMotionDelays = new Map();
+
+  if (homePage) {
+    homePage.querySelectorAll(".editorial-section-head").forEach((heading) => {
+      heading.classList.add("motion-heading");
+      homeMotionItems.add(heading);
+      homeMotionDelays.set(heading, 0);
+    });
+
+    const staggerGroups = [
+      [".school-website-grid", ".school-website-card"],
+      [".home-tool-groups", ".home-tool-group"],
+      [".social-brand-list", ".social-brand-row"],
+      [".reel-upload-rail", ".reel-upload-card"],
+      [".commission-upload-grid", ".commission-upload-card"]
+    ];
+
+    staggerGroups.forEach(([groupSelector, itemSelector]) => {
+      homePage.querySelectorAll(groupSelector).forEach((group) => {
+        homeMotionContainers.add(group);
+        group.querySelectorAll(itemSelector).forEach((item, index) => {
+          item.classList.add("home-motion-card");
+          homeMotionItems.add(item);
+          homeMotionDelays.set(item, Math.min(index, 5) * 60);
+        });
+      });
+    });
+
+    homePage.querySelectorAll(".side-project-group").forEach((group) => {
+      homeMotionContainers.add(group);
+      const toolbar = group.querySelector(".media-showcase-toolbar");
+      if (!toolbar) return;
+      toolbar.classList.add("home-motion-subheading");
+      homeMotionItems.add(toolbar);
+      homeMotionDelays.set(toolbar, 0);
+    });
+
+    const contactLayout = homePage.querySelector(".editorial-contact-layout");
+    if (contactLayout) contactLayout.classList.add("home-motion-panel");
+
+    if (!prefersReducedMotion) {
+      const introSelectors = [
+        ".hero-kicker",
+        ".profile-status",
+        ".hero-name-intro",
+        ".hero-name-primary",
+        ".hero-name-secondary",
+        ".profile-title",
+        ".profile-summary",
+        ".profile-location",
+        ".hero-socials",
+        ".hero-portrait",
+        ".hero-action-panel"
+      ];
+
+      introSelectors.forEach((selector, index) => {
+        const item = homePage.querySelector(selector);
+        if (!item) return;
+        item.classList.add("home-intro-item");
+        item.style.setProperty("--home-intro-delay", `${80 + index * 65}ms`);
+      });
+
+      homePage.classList.add("home-intro-ready");
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => homePage.classList.add("home-intro-visible"));
+      });
+    }
+  }
+
+  const standardRevealItems = Array.from(document.querySelectorAll(
     "[data-aos], .technology-cloud span, .featured-projects a, .profile-detail-list li, .compact-list li"
-  )).filter((item) => !item.classList.contains("social-profile-card"));
+  )).filter((item) => !item.classList.contains("social-profile-card") && !homeMotionContainers.has(item));
+
+  const revealItems = Array.from(new Set([...standardRevealItems, ...homeMotionItems]));
 
   revealItems.forEach((item, index) => {
     item.classList.add("motion-item");
     const explicitDelay = item.dataset.aosDelay;
     const parsedDelay = Number.parseInt(explicitDelay, 10);
-    const delay = explicitDelay === undefined || !Number.isFinite(parsedDelay)
-      ? (index % 6) * 45
-      : parsedDelay;
-    item.style.setProperty("--motion-delay", `${Math.min(delay, 220)}ms`);
+    const groupedDelay = homeMotionDelays.get(item);
+    const delay = Number.isFinite(groupedDelay)
+      ? groupedDelay
+      : explicitDelay === undefined || !Number.isFinite(parsedDelay)
+        ? (index % 6) * 45
+        : parsedDelay;
+    item.style.setProperty("--motion-delay", `${Math.min(delay, 300)}ms`);
   });
 
   if (!prefersReducedMotion && "IntersectionObserver" in window) {
@@ -526,25 +603,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const categoryLabel = document.getElementById("certLightboxCategory");
       const titleLabel = document.getElementById("certLightboxTitle");
       if (categoryLabel) categoryLabel.textContent = category;
-      if (titleLabel) titleLabel.textContent = title;
-    }
-  });
-
-  createLightbox({
-    id: "workLightbox",
-    imageId: "workLightboxImg",
-    triggerSelector: ".visual-work-preview",
-    getPreview: (trigger) => {
-      const previewImage = trigger.querySelector("img");
-      const title = trigger.dataset.workTitle || "Campaign concept";
-      return {
-        source: trigger.dataset.workImage || previewImage?.currentSrc || previewImage?.src,
-        alt: previewImage?.alt || `${title} preview`,
-        title
-      };
-    },
-    onOpen: ({ title }) => {
-      const titleLabel = document.getElementById("workLightboxTitle");
       if (titleLabel) titleLabel.textContent = title;
     }
   });

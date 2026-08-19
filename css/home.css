@@ -1672,7 +1672,7 @@
 
 .school-website-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -1829,6 +1829,7 @@
 .school-website-preview-inkpoint { color: #9f2330; }
 .school-website-preview-edunexus { color: #315f86; }
 .school-website-preview-brainbolt { color: #277b72; }
+.school-website-preview-prolance { color: var(--red); }
 
 .school-website-copy {
   display: grid;
@@ -2874,5 +2875,152 @@
   .social-preview-card-reel {
     grid-column: auto;
     width: min(100%, 240px);
+  }
+}
+
+/* About page: reuse the homepage experience cards without duplicating them. */
+
+.about-experience-section#experience {
+  --section-accent: var(--red-deep);
+  margin-top: clamp(50px, 7vw, 84px);
+  padding: 0;
+  background: transparent;
+  border: 0;
+}
+
+.about-experience-section .group-heading {
+  margin-bottom: 24px;
+}
+
+.about-experience-section .editorial-index-list {
+  margin-bottom: 0;
+}
+
+.about-experience-footer {
+  margin: 18px 0 0;
+  text-align: right;
+}
+
+/* Editorial motion: one-time entrances and quiet tactile feedback. */
+
+.editorial-home.home-intro-ready .profile-hero::after {
+  opacity: 0;
+  transition: opacity 900ms var(--ease) 100ms;
+}
+
+.editorial-home.home-intro-ready.home-intro-visible .profile-hero::after {
+  opacity: 0.16;
+}
+
+.editorial-home.home-intro-ready .home-intro-item {
+  opacity: 0;
+  translate: 0 18px;
+  transition:
+    opacity 620ms var(--ease) var(--home-intro-delay, 0ms),
+    translate 620ms var(--ease) var(--home-intro-delay, 0ms),
+    scale 620ms var(--ease) var(--home-intro-delay, 0ms);
+}
+
+.editorial-home.home-intro-ready .hero-portrait.home-intro-item {
+  scale: 0.985;
+}
+
+.editorial-home.home-intro-ready .hero-action-panel.home-intro-item {
+  translate: 0 22px;
+}
+
+.editorial-home.home-intro-ready.home-intro-visible .home-intro-item {
+  opacity: 1;
+  translate: 0 0;
+  scale: 1;
+}
+
+.editorial-home .motion-item.home-motion-card {
+  opacity: 0;
+  translate: 0 20px;
+  scale: 0.985;
+  transition:
+    opacity 560ms var(--ease) var(--motion-delay, 0ms),
+    translate 560ms var(--ease) var(--motion-delay, 0ms),
+    scale 560ms var(--ease) var(--motion-delay, 0ms),
+    transform 180ms var(--ease),
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.editorial-home .motion-item.home-motion-card.motion-visible {
+  opacity: 1;
+  translate: 0 0;
+  scale: 1;
+}
+
+.editorial-home .motion-heading .editorial-section-number::after {
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition:
+    opacity 420ms ease calc(var(--motion-delay, 0ms) + 120ms),
+    transform 520ms var(--ease) calc(var(--motion-delay, 0ms) + 120ms);
+}
+
+.editorial-home .motion-heading.motion-visible .editorial-section-number::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .home-tool-list li {
+    transition: transform 180ms var(--ease), border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+  }
+
+  .home-tool-mark {
+    transition: transform 180ms var(--ease);
+  }
+
+  .home-tool-list li:hover,
+  .home-tool-list li:focus-within {
+    background: var(--surface);
+    border-color: color-mix(in srgb, var(--section-accent) 38%, var(--line));
+    box-shadow: 0 10px 24px color-mix(in srgb, var(--section-accent) 9%, transparent);
+    transform: translateY(-3px);
+  }
+
+  .home-tool-list li:hover .home-tool-mark,
+  .home-tool-list li:focus-within .home-tool-mark {
+    transform: scale(1.045);
+  }
+
+  .reel-upload-card:hover,
+  .commission-upload-card:hover {
+    border-color: color-mix(in srgb, var(--section-accent) 40%, var(--line));
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+  }
+
+  .reel-upload-stage video,
+  .commission-upload-stage img {
+    transition: opacity 180ms ease, transform 260ms var(--ease);
+  }
+
+  .reel-upload-card:hover .reel-upload-stage video,
+  .commission-upload-card:hover .commission-upload-stage img {
+    transform: scale(1.012);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .editorial-home.home-intro-ready .home-intro-item,
+  .editorial-home .motion-item.home-motion-card,
+  .editorial-home .motion-heading .editorial-section-number::after {
+    opacity: 1;
+    translate: 0 0;
+    scale: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .editorial-home.home-intro-ready .profile-hero::after {
+    opacity: 0.16;
+    transition: none;
   }
 }
