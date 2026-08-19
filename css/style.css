@@ -3391,13 +3391,13 @@ img {
 
 .motion-item {
   opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 500ms var(--ease) var(--motion-delay, 0ms), transform 500ms var(--ease) var(--motion-delay, 0ms);
+  translate: 0 14px;
+  transition: opacity 500ms var(--ease) var(--motion-delay, 0ms), translate 500ms var(--ease) var(--motion-delay, 0ms);
 }
 
 .motion-item.motion-visible {
   opacity: 1;
-  transform: translateY(0);
+  translate: 0 0;
 }
 
 /* Responsive ------------------------------------------------------------- */
@@ -3996,6 +3996,7 @@ img {
 
   .motion-item {
     opacity: 1;
+    translate: 0 0;
     transform: none;
   }
 
