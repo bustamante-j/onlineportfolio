@@ -480,6 +480,89 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   bindTabKeyboard(beyondTabs, (tab) => activateBeyondInterest(tab, { focus: true, scroll: true }));
 
+  const favoriteGameTabs = Array.from(document.querySelectorAll(".favorite-game-tab[role='tab']"));
+  const favoriteGamePanel = document.getElementById("favoriteGamePanel");
+  const favoriteGameImage = document.getElementById("favoriteGameImage");
+  const favoriteGameMeta = document.getElementById("favoriteGameMeta");
+  const favoriteGameTitle = document.getElementById("favoriteGameTitle");
+  const favoriteGameDescription = document.getElementById("favoriteGameDescription");
+  const favoriteGamePlaceholderRank = document.getElementById("favoriteGamePlaceholderRank");
+  const favoriteGameUploadName = document.getElementById("favoriteGameUploadName");
+  let favoriteGameImageRequest = 0;
+
+  const loadFavoriteGameImage = (tab) => {
+    if (!favoriteGamePanel || !favoriteGameImage) return;
+
+    const source = tab.dataset.image || "";
+    const filename = source.split("/").pop() || "game-artwork.png";
+    const requestId = ++favoriteGameImageRequest;
+
+    favoriteGamePanel.classList.remove("has-game-image");
+    favoriteGameImage.removeAttribute("src");
+    favoriteGameImage.alt = "";
+    if (favoriteGameUploadName) favoriteGameUploadName.textContent = filename;
+    if (!source) return;
+
+    const loader = new Image();
+    loader.decoding = "async";
+
+    loader.addEventListener("load", () => {
+      if (requestId !== favoriteGameImageRequest) return;
+      favoriteGameImage.src = source;
+      favoriteGameImage.alt = tab.dataset.imageAlt || `${tab.dataset.title || "Favorite game"} artwork`;
+      requestAnimationFrame(() => favoriteGamePanel.classList.add("has-game-image"));
+    }, { once: true });
+
+    loader.addEventListener("error", () => {
+      if (requestId !== favoriteGameImageRequest) return;
+      favoriteGamePanel.classList.remove("has-game-image");
+    }, { once: true });
+
+    loader.src = source;
+  };
+
+  const activateFavoriteGame = (tab, { focus = false, scroll = false } = {}) => {
+    const activeIndex = favoriteGameTabs.indexOf(tab);
+    if (activeIndex < 0 || !favoriteGamePanel) return;
+
+    favoriteGameTabs.forEach((item, index) => {
+      const isActive = index === activeIndex;
+      item.classList.toggle("is-active", isActive);
+      item.setAttribute("aria-selected", String(isActive));
+      item.tabIndex = isActive ? 0 : -1;
+    });
+
+    favoriteGamePanel.setAttribute("aria-labelledby", tab.id);
+    if (favoriteGameMeta) favoriteGameMeta.textContent = tab.dataset.meta || "Favorite game";
+    if (favoriteGameTitle) favoriteGameTitle.textContent = tab.dataset.title || "Favorite game";
+    if (favoriteGameDescription) favoriteGameDescription.textContent = tab.dataset.copy || "";
+    if (favoriteGamePlaceholderRank) favoriteGamePlaceholderRank.textContent = tab.dataset.rank || String(activeIndex + 1).padStart(2, "0");
+    loadFavoriteGameImage(tab);
+
+    if (focus) tab.focus();
+    if (scroll && window.innerWidth < 768) {
+      tab.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth", block: "nearest", inline: "center" });
+    }
+
+    if (!prefersReducedMotion && typeof favoriteGamePanel.animate === "function") {
+      favoriteGamePanel.querySelector(".favorite-game-copy")?.animate(
+        [
+          { opacity: 0.58, transform: "translateY(8px)" },
+          { opacity: 1, transform: "translateY(0)" }
+        ],
+        { duration: 280, easing: "cubic-bezier(0.2, 0.75, 0.25, 1)" }
+      );
+    }
+  };
+
+  favoriteGameTabs.forEach((tab) => {
+    tab.addEventListener("click", () => activateFavoriteGame(tab));
+  });
+  bindTabKeyboard(favoriteGameTabs, (tab) => activateFavoriteGame(tab, { focus: true, scroll: true }));
+
+  const initialFavoriteGame = favoriteGameTabs.find((tab) => tab.getAttribute("aria-selected") === "true") || favoriteGameTabs[0];
+  if (initialFavoriteGame) activateFavoriteGame(initialFavoriteGame);
+
   const resumeImage = document.getElementById("resumeImage");
   const resumeZoomIn = document.getElementById("resumeZoomIn");
   const resumeZoomOut = document.getElementById("resumeZoomOut");
