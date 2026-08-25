@@ -9,4 +9,4 @@ Upload transparent-background PNG logos here using these exact filenames:
 - `sejda-pdf.png`
 - `opusclip.png`
 
-The homepage and Skills page will automatically replace their fallback symbols when these files are present. Square PNGs at 512 x 512 pixels or larger work best. Center each logo and leave a small, even transparent margin around it.
+The homepage will automatically replace its fallback symbols when these files are present. Square PNGs at 512 x 512 pixels or larger work best. Center each logo and leave a small, even transparent margin around it.

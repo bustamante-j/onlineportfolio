@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 
-const pages = ["index", "about", "skills", "experience", "credentials", "resume", "contact"];
+const pages = ["index", "about", "credentials", "resume", "contact"];
 
 export default defineConfig({
   base: "./",

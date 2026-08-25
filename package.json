@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "optimize:images": "node scripts/optimize-images.mjs",
+    "predev": "npm run optimize:images",
     "dev": "vite",
+    "prebuild": "npm run optimize:images",
     "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "sharp": "^0.35.3",
     "vite": "https://registry.npmjs.org/vite/-/vite-8.2.0.tgz"
   }
 }
